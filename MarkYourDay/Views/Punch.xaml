@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MarkYourDay.Views.Punch">
+    <ContentPage.Content>
+        <StackLayout
+            HorizontalOptions="CenterAndExpand"
+            VerticalOptions="CenterAndExpand">
+            <Label
+                x:Name="where"
+                />
+            <Button
+                x:Name="Start"
+                Text="START"
+                WidthRequest="200"
+                HeightRequest="100"
+                TextColor="Blue"
+                FontSize="Large"
+                FontAttributes="Bold"
+                Margin="10"
+                />
+            <Button
+                x:Name="Stop"
+                Text="STOP"
+                WidthRequest="200"
+                FontSize="Large"
+                FontAttributes="Bold"
+                HeightRequest="100"
+                TextColor="Orange"
+                Margin="10"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

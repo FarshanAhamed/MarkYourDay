@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MarkYourDay.Views.Login">
+    <ContentPage.Content>
+        <StackLayout>
+            <Entry x:Name="Username"
+                   Placeholder="Username"
+                   PlaceholderColor="LightGray"
+                   Margin="10"
+                   TextColor="Black"
+                   />
+            <Entry x:Name="Password"
+                   Placeholder="Password"
+                   Margin="10"
+                   IsPassword="True"
+                   TextColor="Black"
+                   PlaceholderColor="LightGray"
+                   />
+            <Button
+                x:Name="LoginButton"
+                Text="Login"
+                TextColor="Aqua"
+                BackgroundColor="Gray"
+                Margin="10"
+                FontSize="Medium"
+               />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
