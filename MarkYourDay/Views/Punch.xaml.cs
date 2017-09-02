@@ -76,8 +76,8 @@ namespace MarkYourDay.Views
                     User user = new User
                     {
                         name = Settings.Username,
-                        present = true,
-                        start = start
+                        //present = true,
+                        //start = start
                     };
                     string body = await Task.Factory.StartNew(() => JsonConvert.SerializeObject(user));
                     var res = await UserServices.UpdateDetails(body);
@@ -119,9 +119,9 @@ namespace MarkYourDay.Views
                         User user = new User
                         {
                             name = Settings.Username,
-                            present = true,
-                            start = start,
-                            stop = stop
+                            //present = true,
+                            //start = start,
+                           // stop = stop
                         };
 
                         string body = await Task.Factory.StartNew(() => JsonConvert.SerializeObject(user));

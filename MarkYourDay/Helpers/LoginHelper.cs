@@ -1,4 +1,7 @@
-﻿namespace MarkYourDay.Helpers
+﻿using MarkYourDay.Services;
+using System.Threading.Tasks;
+
+namespace MarkYourDay.Helpers
 {
     public class LoginHelper
     {
@@ -45,5 +48,16 @@
                 Settings.AtFantacode = "No";
                 */
         }
+        public async Task<bool> IsUserValid(string username, string password)
+        {
+            bool result = true;
+            var item = await UserServices.GetUser(username,password);
+            if (item == null)
+            {
+                result = false;
+            }
+            return result;
+        }
+        
     }
 }

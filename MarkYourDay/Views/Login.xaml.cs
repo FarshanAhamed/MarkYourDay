@@ -17,14 +17,19 @@ namespace MarkYourDay.Views
             LoginButton.Clicked += Login_Clicked;
         }
 
-        private async void Login_Clicked(object sender, EventArgs e)
+        public async void Login_Clicked(object sender, EventArgs e)
         {
             if (!string.IsNullOrWhiteSpace(Username.Text) && (!string.IsNullOrWhiteSpace(Password.Text)))
             {
-                await Navigation.PushAsync(new Punch(Username.Text));
+                if (await IsUserValid(Username.Text, Password.Text))
+                {
+                    await Navigation.PushAsync(new Punch(Username.Text));
+                }
+                else
+                    await DisplayAlert("Incorrect", "Incorrect Login Details!\nPlease Fill in details and Try Again", "OK");
             }
             else
-                await DisplayAlert("Incorrect", "Incorrect Login Details!\nPlease Fill in details and Try Again", "OK");
+                await DisplayAlert("Fill Details", "Please Fill all details and Try Again", "OK");
         }
     }
 }

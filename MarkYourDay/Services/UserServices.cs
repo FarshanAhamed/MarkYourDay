@@ -9,17 +9,17 @@ namespace MarkYourDay.Services
 {
     public class UserServices
     {
-        public async static Task<Model<List<User>>> GetAllUsers()
+      /*  public async static Task<Model<List<User>>> GetAllUsers()
         {
             var result = await CommonService<List<User>>.HttpGetOperation("");
             return result;
-        }
+        }*/
 
-        /* public async static Task<Model<User>> GetUser()
+         public async static Task<Model<User>> GetUser(string username,string password)
             {
-               var result = await CommonService<User>.HttpGetOperation("/");
+               var result = await CommonService<User>.HttpGetOperation("/"+username+"/"+password);
                 return result;
-            } */
+            } 
 
         public async static Task<Model<User>> CreateUser(string body)
         {

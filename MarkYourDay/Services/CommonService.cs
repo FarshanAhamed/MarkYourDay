@@ -13,8 +13,8 @@ namespace MarkYourDay.Services
 {
     public class CommonService<T>
     {
-        public const string BaseUrl = "http://punchapi.azurewebsites.net/api/user";
-
+        //public const string BaseUrl = "http://punchapi.azurewebsites.net/api/user";
+        public const string BaseUrl = "http://localhost:49888/api/user";
         public async static Task<Model<T>> HttpGetOperation(string url)
         {
             try
