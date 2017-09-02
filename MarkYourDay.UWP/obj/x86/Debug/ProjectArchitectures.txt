@@ -1,0 +1,2 @@
+C:\Users\fffar\Documents\GitHub\MarkYourDay\MarkYourDay\MarkYourDay.UWP\MarkYourDay.UWP.csproj;x86
+C:\Users\fffar\Documents\GitHub\MarkYourDay\MarkYourDay\MarkYourDay\MarkYourDay.csproj;neutral

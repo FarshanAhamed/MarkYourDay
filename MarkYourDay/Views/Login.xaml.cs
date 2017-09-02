@@ -1,4 +1,5 @@
 ﻿
+using MarkYourDay.Interfaces;
 using System;
 
 using Xamarin.Forms;
@@ -12,6 +13,7 @@ namespace MarkYourDay.Views
         public Login()
         {
             InitializeComponent();
+            DependencyService.Get<IStatusBar>().HideStatusBar();
             LoginButton.Clicked += Login_Clicked;
         }
 

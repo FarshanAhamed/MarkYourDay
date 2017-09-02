@@ -1,9 +1,6 @@
 ﻿using MarkYourDay.Helpers;
+using MarkYourDay.Interfaces;
 using MarkYourDay.Views;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 using Xamarin.Forms;
 
@@ -14,6 +11,7 @@ namespace MarkYourDay
         public App()
         {
             InitializeComponent();
+            //DependencyService.Get<IStatusBar>().HideStatusBar();
 
             if (LoginHelper.CheckLoggedIn())
             {
@@ -40,4 +38,5 @@ namespace MarkYourDay
             // Handle when your app resumes
         }
     }
+   
 }

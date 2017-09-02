@@ -1,30 +1,43 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MarkYourDay.Views.Login">
+             x:Class="MarkYourDay.Views.Login"
+             xmlns:local="clr-namespace:MarkYourDay.Helpers;assembly=MarkYourDay"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="White">
     <ContentPage.Content>
-        <StackLayout>
-            <Entry x:Name="Username"
-                   Placeholder="Username"
-                   PlaceholderColor="LightGray"
-                   Margin="10"
-                   TextColor="Black"
+        <Grid>
+            <StackLayout VerticalOptions="CenterAndExpand">
+                <Image
+                Source="FcImage"
+                HorizontalOptions="CenterAndExpand"
+                Margin="0,20,0,20"
+                Scale=".7"
                    />
-            <Entry x:Name="Password"
-                   Placeholder="Password"
-                   Margin="10"
-                   IsPassword="True"
-                   TextColor="Black"
-                   PlaceholderColor="LightGray"
+                <local:MyEntry
+                    x:Name="Username"
+                    Margin="20,5,20,7"
+                    Placeholder="Username"
+                    />
+                <local:MyEntry 
+                    x:Name="Password"
+                    Placeholder="Password"
+                    IsPassword="True"
+                    Margin="20,7,20,40"
+                    />
+                <Button
+                    x:Name="LoginButton"
+                    Text="Login"
+                    Style="{StaticResource buttonStyle}"
+                    />
+            </StackLayout>
+            <Label x:Name="Label"
+                   Text="v1.0 All Rights Reserved"
+                   VerticalOptions="EndAndExpand"
+                   HorizontalOptions="Center"
+                   Scale=".8"
+                   Margin="0,0,0,5"
                    />
-            <Button
-                x:Name="LoginButton"
-                Text="Login"
-                TextColor="Aqua"
-                BackgroundColor="Gray"
-                Margin="10"
-                FontSize="Medium"
-               />
-        </StackLayout>
+        </Grid>
     </ContentPage.Content>
 </ContentPage>

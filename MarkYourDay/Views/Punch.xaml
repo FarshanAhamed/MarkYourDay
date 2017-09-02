@@ -1,15 +1,50 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin.Abstractions"    
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MarkYourDay.Views.Punch">
     <ContentPage.Content>
-        <StackLayout
-            HorizontalOptions="CenterAndExpand"
-            VerticalOptions="CenterAndExpand">
+        <Grid
+            HorizontalOptions="Fill"
+            VerticalOptions="Fill">
             <Label
                 x:Name="where"
+                Text="Last checked in at 24/08/2017 9:42:12"
+                FontAttributes="Italic"
+                HorizontalOptions="Center"
+                VerticalOptions="Start"
+                Margin="20"
                 />
-            <Button
+            <ProgressBar HorizontalOptions="Center" VerticalOptions="End"/>
+            <controls:CircleImage x:Name="Start" Source="checkindark" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Aspect="AspectFill">
+                <controls:CircleImage.WidthRequest>
+                    <OnPlatform x:TypeArguments="x:Double">
+                        <On Platform="Android, iOS">200</On>
+                        <On Platform="WinPhone">200</On>
+                    </OnPlatform>
+                </controls:CircleImage.WidthRequest>
+                <controls:CircleImage.HeightRequest>
+                    <OnPlatform x:TypeArguments="x:Double">
+                        <On Platform="Android, iOS">200</On>
+                        <On Platform="WinPhone">200</On>
+                    </OnPlatform>
+                </controls:CircleImage.HeightRequest>
+            </controls:CircleImage>
+            <controls:CircleImage x:Name="Stop" Source="checkoutdark" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Aspect="AspectFill">
+                <controls:CircleImage.WidthRequest>
+                    <OnPlatform x:TypeArguments="x:Double">
+                        <On Platform="Android, iOS">200</On>
+                        <On Platform="WinPhone">75</On>
+                    </OnPlatform>
+                </controls:CircleImage.WidthRequest>
+                <controls:CircleImage.HeightRequest>
+                    <OnPlatform x:TypeArguments="x:Double">
+                        <On Platform="Android, iOS">200</On>
+                        <On Platform="WinPhone">75</On>
+                    </OnPlatform>
+                </controls:CircleImage.HeightRequest>
+            </controls:CircleImage>
+            <!-- <Button
                 x:Name="Start"
                 Text="START"
                 WidthRequest="200"
@@ -27,7 +62,7 @@
                 FontAttributes="Bold"
                 HeightRequest="100"
                 TextColor="Orange"
-                Margin="10"/>
-        </StackLayout>
+                Margin="10"/> -->
+        </Grid>
     </ContentPage.Content>
 </ContentPage>

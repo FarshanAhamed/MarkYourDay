@@ -62,7 +62,7 @@ namespace MarkYourDay.Helpers
                 //  await DisplayAlert("Distance", "Your distance from FC: " + dist, "OK");
 
             }
-            CrossGeolocator.Current.PositionChanged += PositionChanged;
+//CrossGeolocator.Current.PositionChanged += PositionChanged;
 
             bool result = await CrossGeolocator.Current.StartListeningAsync(TimeSpan.FromSeconds(1), 1, true, new Plugin.Geolocator.Abstractions.ListenerSettings
             {
