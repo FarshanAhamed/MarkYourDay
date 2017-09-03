@@ -1,9 +1,11 @@
 ﻿
 using MarkYourDay.Interfaces;
 using System;
-
+using MarkYourDay.Helpers;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using System.Threading.Tasks;
+using MarkYourDay.Services;
 
 namespace MarkYourDay.Views
 {
@@ -14,7 +16,7 @@ namespace MarkYourDay.Views
         {
             InitializeComponent();
             DependencyService.Get<IStatusBar>().HideStatusBar();
-            LoginButton.Clicked += Login_Clicked;
+            LoginButton.Clicked += Login_Clicked;           
         }
 
         public async void Login_Clicked(object sender, EventArgs e)
@@ -31,5 +33,16 @@ namespace MarkYourDay.Views
             else
                 await DisplayAlert("Fill Details", "Please Fill all details and Try Again", "OK");
         }
+
+       /* public async Task<bool> IsUserValid(string username, string password)
+        {
+            bool result = true;
+            var item = await UserServices.GetUser(username, password);
+            if (item.data == null)
+            {
+                result = false;
+            }
+            return result;
+        }*/
     }
 }
