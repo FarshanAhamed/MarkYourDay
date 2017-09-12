@@ -2,21 +2,54 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin.Abstractions"    
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:myView="clr-namespace:ButtonCircle.FormsPlugin.Abstractions;assembly=ButtonCircle.FormsPlugin.Abstractions"
              x:Class="MarkYourDay.Views.Punch">
-    <ContentPage.Content>
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Log out" Icon="logout" Clicked="Logout_Clicked"/>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>        
         <Grid
             HorizontalOptions="Fill"
             VerticalOptions="Fill">
-            <Label
-                x:Name="where"
-                Text="Last checked in at 24/08/2017 9:42:12"
-                FontAttributes="Italic"
-                HorizontalOptions="Center"
+            <ActivityIndicator x:Name="myActivityIndicator" IsRunning="True" IsVisible="False" Color="#4094d9" VerticalOptions="Center" HorizontalOptions="Center"/>
+            <Grid x:Name="myGridView" VerticalOptions="Fill" HorizontalOptions="Fill">
+                <Label 
+                x:Name="usernameLabel"
+                FontSize="Medium"
+                Text="{Binding UserText}"
+                HorizontalOptions="CenterAndExpand"
                 VerticalOptions="Start"
                 Margin="20"
                 />
-            <ProgressBar HorizontalOptions="Center" VerticalOptions="End"/>
-            <controls:CircleImage x:Name="Start" Source="checkindark" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Aspect="AspectFill">
+            <Label
+                x:Name="historylabel"
+                Text="{Binding Time}"
+                FontAttributes="Italic"
+                HorizontalOptions="Center"
+                VerticalOptions="EndAndExpand"
+                Margin="20"
+                />        
+                
+            <myView:CircleButton 
+                x:Name="CheckInBtn"
+                Text="Check In" 
+                FontSize="Medium" FontAttributes="Bold" TextColor="#4094d9" 
+                HeightRequest="150" WidthRequest="150"
+                HorizontalOptions="Center" VerticalOptions="Center"
+                BorderRadius="100" BorderThickness="5" BorderColor="#4094d9" 
+                BackgroundColor="#DCDCDC" Clicked="OnStartTapped">
+            </myView:CircleButton>
+            <myView:CircleButton
+                x:Name="CheckOutBtn"
+                Text="Check Out"                 
+                FontSize="Medium" FontAttributes="Bold" TextColor="#4094d9" 
+                HeightRequest="150" WidthRequest="150" 
+                HorizontalOptions="Center" VerticalOptions="Center"
+                BorderRadius="100" BorderThickness="5" BorderColor="#4094d9" 
+                BackgroundColor="#DCDCDC" Clicked="OnStopTapped">
+            </myView:CircleButton>
+            <!-- <ProgressBar HorizontalOptions="Center" VerticalOptions="End"/>
+            <controls:CircleImage x:Name="CheckInBtn" Source="checkindark" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Aspect="AspectFill">
                 <controls:CircleImage.WidthRequest>
                     <OnPlatform x:TypeArguments="x:Double">
                         <On Platform="Android, iOS">200</On>
@@ -30,7 +63,7 @@
                     </OnPlatform>
                 </controls:CircleImage.HeightRequest>
             </controls:CircleImage>
-            <controls:CircleImage x:Name="Stop" Source="checkoutdark" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Aspect="AspectFill">
+            <controls:CircleImage x:Name="CheckOutBtn" Source="checkoutdark" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Aspect="AspectFill">
                 <controls:CircleImage.WidthRequest>
                     <OnPlatform x:TypeArguments="x:Double">
                         <On Platform="Android, iOS">200</On>
@@ -43,7 +76,7 @@
                         <On Platform="WinPhone">75</On>
                     </OnPlatform>
                 </controls:CircleImage.HeightRequest>
-            </controls:CircleImage>
+            </controls:CircleImage> -->
             <!-- <Button
                 x:Name="Start"
                 Text="START"
@@ -63,6 +96,7 @@
                 HeightRequest="100"
                 TextColor="Orange"
                 Margin="10"/> -->
+            </Grid>
         </Grid>
     </ContentPage.Content>
 </ContentPage>

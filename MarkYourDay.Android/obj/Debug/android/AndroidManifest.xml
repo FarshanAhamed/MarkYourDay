@@ -12,7 +12,8 @@
   <uses-feature android:name="android.hardware.location.gps" />
   <uses-feature android:name="android.hardware.location.network" />
   <application android:label="MarkYourDay.Android" android:name="md5a17302a0e51783f4b76239310befa785.MainApplication" android:allowBackup="true" android:icon="@drawable/icon" android:debuggable="true">
-    <activity android:configChanges="orientation|screenSize" android:icon="@drawable/icon" android:label="MarkYourDay" android:theme="@style/MainTheme" android:name="md5a17302a0e51783f4b76239310befa785.MainActivity">
+    <activity android:configChanges="orientation|screenSize" android:icon="@drawable/icon" android:label="MarkYourDay" android:theme="@style/MainTheme" android:name="md5a17302a0e51783f4b76239310befa785.MainActivity" />
+    <activity android:noHistory="true" android:theme="@style/Theme.Splash" android:name="md5a17302a0e51783f4b76239310befa785.SplashActivity">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />
         <category android:name="android.intent.category.LAUNCHER" />

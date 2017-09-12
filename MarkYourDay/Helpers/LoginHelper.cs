@@ -1,4 +1,7 @@
-﻿using MarkYourDay.Services;
+﻿using MarkYourDay.Models;
+using MarkYourDay.Services;
+using MarkYourDay.Views;
+using System;
 using System.Threading.Tasks;
 
 namespace MarkYourDay.Helpers
@@ -48,15 +51,63 @@ namespace MarkYourDay.Helpers
                 Settings.AtFantacode = "No";
                 */
         }
-        public async Task<bool> IsUserValid(string username, string password)
+        public static async Task<bool> IsUserValid(string username, string password,Login login )
         {
-            bool result = true;
+           
             var item = await UserServices.GetUser(username,password);
-            if (item == null)
+            if (item.data != null)
             {
-                result = false;
+                
+                Settings.Token = item.token;
+                Settings.Username = item.data.name;
+                Settings.UserId = item.data.id.ToString();
+                return true;
             }
-            return result;
+            else
+            {
+                await login.DisplayAlert("There is a problem", item.message.ToString(), "OK");
+                return false;
+            }
+           
+        }
+
+        public static async Task GetToday()
+        {
+            var item = await AttendanceServices.GetToday();
+            if (item.data == null)
+            {
+                Settings.CheckedTime = "No Check Ins found";
+                Settings.CheckedStatus = "CHECKS_NULL";
+            }
+            else if (item.data.firstcheckin == DateTime.MinValue)
+            {
+                Settings.CheckedTime = "No Check ins found";
+                Settings.CheckedStatus = "CHECKED_OUT";
+            }
+            else if (item.data.firstcheckout == DateTime.MinValue)
+            {
+                var date = item.data.firstcheckin;
+                Settings.CheckedTime = "Last Checked in at " + date.ToLocalTime().ToString();
+                Settings.CheckedStatus = "CHECKED_IN";
+            }
+            else if (item.data.secondcheckin == DateTime.MinValue)
+            {
+                var date = item.data.firstcheckout;
+                Settings.CheckedTime = "Last Checked out at " + date.ToLocalTime().ToString();
+                Settings.CheckedStatus = "CHECKED_OUT";
+            }
+            else if (item.data.secondcheckout == DateTime.MinValue)
+            {
+                var date = item.data.secondcheckin;
+                Settings.CheckedTime = "Last Checked in at " + date.ToLocalTime().ToString();
+                Settings.CheckedStatus = "CHECKED_IN";
+            }
+            else
+            {
+                var date = item.data.secondcheckout;
+                Settings.CheckedTime = "Limits exceeded! "+Environment.NewLine+"Last Checked out at " + date.ToLocalTime().ToString();
+                Settings.CheckedStatus = "CHECKS_FULL";
+            }
         }
         
     }

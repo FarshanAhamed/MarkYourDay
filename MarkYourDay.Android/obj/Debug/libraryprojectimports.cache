@@ -2,6 +2,7 @@
 <Paths>
   <Jars></Jars>
   <ResolvedResourceDirectories>
+    <ResolvedResourceDirectory>C:\Users\fffar\Documents\GitHub\MarkYourDay\MarkYourDay\MarkYourDay.Android\obj\Debug\__library_projects__\ButtonCircle.FormsPlugin.Android\library_project_imports\res</ResolvedResourceDirectory>
     <ResolvedResourceDirectory>C:\Users\fffar\Documents\GitHub\MarkYourDay\MarkYourDay\MarkYourDay.Android\obj\Debug\__library_projects__\ModernHttpClient\library_project_imports\res</ResolvedResourceDirectory>
     <ResolvedResourceDirectory>C:\Users\fffar\Documents\GitHub\MarkYourDay\MarkYourDay\MarkYourDay.Android\obj\Debug\__library_projects__\Plugin.Connectivity\library_project_imports\res</ResolvedResourceDirectory>
     <ResolvedResourceDirectory>C:\Users\fffar\Documents\GitHub\MarkYourDay\MarkYourDay\MarkYourDay.Android\obj\Debug\__library_projects__\Plugin.CurrentActivity\library_project_imports\res</ResolvedResourceDirectory>
@@ -21,6 +22,7 @@
     <ResolvedResourceDirectory>C:\Users\fffar\Documents\GitHub\MarkYourDay\MarkYourDay\MarkYourDay.Android\obj\Debug\__library_projects__\Plugin.Geolocator\library_project_imports\res</ResolvedResourceDirectory>
   </ResolvedResourceDirectories>
   <ResolvedAssetDirectories>
+    <ResolvedAssetDirectory>obj\Debug\__library_projects__\ButtonCircle.FormsPlugin.Android\library_project_imports\assets</ResolvedAssetDirectory>
     <ResolvedAssetDirectory>obj\Debug\__library_projects__\ModernHttpClient\library_project_imports\assets</ResolvedAssetDirectory>
     <ResolvedAssetDirectory>obj\Debug\__library_projects__\Plugin.Connectivity\library_project_imports\assets</ResolvedAssetDirectory>
     <ResolvedAssetDirectory>obj\Debug\__library_projects__\Plugin.CurrentActivity\library_project_imports\assets</ResolvedAssetDirectory>
@@ -36,6 +38,7 @@
   </ResolvedAssetDirectories>
   <ResolvedEnvironmentFiles />
   <ResolvedResourceDirectoryStamps>
+    <ResolvedResourceDirectoryStamp>C:\Users\fffar\Documents\GitHub\MarkYourDay\MarkYourDay\MarkYourDay.Android\obj\Debug\__library_projects__\ButtonCircle.FormsPlugin.Android.stamp</ResolvedResourceDirectoryStamp>
     <ResolvedResourceDirectoryStamp>C:\Users\fffar\Documents\GitHub\MarkYourDay\MarkYourDay\MarkYourDay.Android\obj\Debug\__library_projects__\ModernHttpClient.stamp</ResolvedResourceDirectoryStamp>
     <ResolvedResourceDirectoryStamp>C:\Users\fffar\Documents\GitHub\MarkYourDay\MarkYourDay\MarkYourDay.Android\obj\Debug\__library_projects__\Plugin.Connectivity.stamp</ResolvedResourceDirectoryStamp>
     <ResolvedResourceDirectoryStamp>C:\Users\fffar\Documents\GitHub\MarkYourDay\MarkYourDay\MarkYourDay.Android\obj\Debug\__library_projects__\Plugin.CurrentActivity.stamp</ResolvedResourceDirectoryStamp>

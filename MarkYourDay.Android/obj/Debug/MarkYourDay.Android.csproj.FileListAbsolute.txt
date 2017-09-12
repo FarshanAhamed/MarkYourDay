@@ -39,7 +39,6 @@ C:\Users\fffar\Documents\GitHub\MarkYourDay\MarkYourDay\MarkYourDay.Android\bin\
 C:\Users\fffar\Documents\GitHub\MarkYourDay\MarkYourDay\MarkYourDay.Android\bin\Debug\Xamarin.Forms.Platform.Android.dll
 C:\Users\fffar\Documents\GitHub\MarkYourDay\MarkYourDay\MarkYourDay.Android\bin\Debug\Xamarin.Forms.Platform.dll
 C:\Users\fffar\Documents\GitHub\MarkYourDay\MarkYourDay\MarkYourDay.Android\bin\Debug\Xamarin.Forms.Xaml.dll
-C:\Users\fffar\Documents\GitHub\MarkYourDay\MarkYourDay\MarkYourDay.Android\bin\Debug\ImageCircle.Forms.Plugin.Abstractions.dll
 C:\Users\fffar\Documents\GitHub\MarkYourDay\MarkYourDay\MarkYourDay.Android\bin\Debug\MarkYourDay.pdb
 C:\Users\fffar\Documents\GitHub\MarkYourDay\MarkYourDay\MarkYourDay.Android\bin\Debug\MarkYourDay.dll.mdb
 C:\Users\fffar\Documents\GitHub\MarkYourDay\MarkYourDay\MarkYourDay.Android\bin\Debug\FormsViewGroup.pdb
@@ -81,8 +80,6 @@ C:\Users\fffar\Documents\GitHub\MarkYourDay\MarkYourDay\MarkYourDay.Android\bin\
 C:\Users\fffar\Documents\GitHub\MarkYourDay\MarkYourDay\MarkYourDay.Android\bin\Debug\Xamarin.Forms.Xaml.pdb
 C:\Users\fffar\Documents\GitHub\MarkYourDay\MarkYourDay\MarkYourDay.Android\bin\Debug\Xamarin.Forms.Xaml.xml
 C:\Users\fffar\Documents\GitHub\MarkYourDay\MarkYourDay\MarkYourDay.Android\bin\Debug\Xamarin.Forms.Xaml.dll.mdb
-C:\Users\fffar\Documents\GitHub\MarkYourDay\MarkYourDay\MarkYourDay.Android\bin\Debug\ImageCircle.Forms.Plugin.Abstractions.pdb
-C:\Users\fffar\Documents\GitHub\MarkYourDay\MarkYourDay\MarkYourDay.Android\bin\Debug\ImageCircle.Forms.Plugin.Abstractions.xml
 C:\Users\fffar\Documents\GitHub\MarkYourDay\MarkYourDay\MarkYourDay.Android\obj\Debug\XbdMerge\Xamarin.Android.Support.Annotations.dll.stamp
 C:\Users\fffar\Documents\GitHub\MarkYourDay\MarkYourDay\MarkYourDay.Android\obj\Debug\XbdMerge\Xamarin.Android.Support.Compat.dll.stamp
 C:\Users\fffar\Documents\GitHub\MarkYourDay\MarkYourDay\MarkYourDay.Android\obj\Debug\XbdMerge\Xamarin.Android.Support.Core.UI.dll.stamp
@@ -137,4 +134,20 @@ C:\Users\fffar\Documents\GitHub\MarkYourDay\MarkYourDay\MarkYourDay.Android\obj\
 C:\Users\fffar\Documents\GitHub\MarkYourDay\MarkYourDay\MarkYourDay.Android\obj\Debug\android\assets\Xamarin.Forms.Platform.Android.dll.mdb
 C:\Users\fffar\Documents\GitHub\MarkYourDay\MarkYourDay\MarkYourDay.Android\obj\Debug\android\assets\Xamarin.Forms.Xaml.dll.mdb
 C:\Users\fffar\Documents\GitHub\MarkYourDay\MarkYourDay\MarkYourDay.Android\obj\Debug\MarkYourDay.Android.csprojResolveAssemblyReference.cache
+C:\Users\fffar\Documents\GitHub\MarkYourDay\MarkYourDay\MarkYourDay.Android\bin\Debug\ButtonCircle.FormsPlugin.Abstractions.dll
+C:\Users\fffar\Documents\GitHub\MarkYourDay\MarkYourDay\MarkYourDay.Android\bin\Debug\ButtonCircle.FormsPlugin.Android.dll
+C:\Users\fffar\Documents\GitHub\MarkYourDay\MarkYourDay\MarkYourDay.Android\bin\Debug\ButtonCircle.FormsPlugin.Abstractions.pdb
+C:\Users\fffar\Documents\GitHub\MarkYourDay\MarkYourDay\MarkYourDay.Android\bin\Debug\ButtonCircle.FormsPlugin.Abstractions.xml
+C:\Users\fffar\Documents\GitHub\MarkYourDay\MarkYourDay\MarkYourDay.Android\bin\Debug\ButtonCircle.FormsPlugin.Android.pdb
+C:\Users\fffar\Documents\GitHub\MarkYourDay\MarkYourDay\MarkYourDay.Android\bin\Debug\ButtonCircle.FormsPlugin.Android.xml
+C:\Users\fffar\Documents\GitHub\MarkYourDay\MarkYourDay\MarkYourDay.Android\bin\Debug\ButtonCircle.FormsPlugin.Abstractions.dll.mdb
+C:\Users\fffar\Documents\GitHub\MarkYourDay\MarkYourDay\MarkYourDay.Android\bin\Debug\ButtonCircle.FormsPlugin.Android.dll.mdb
+C:\Users\fffar\Documents\GitHub\MarkYourDay\MarkYourDay\MarkYourDay.Android\obj\Debug\android\assets\ButtonCircle.FormsPlugin.Abstractions.dll.mdb
+C:\Users\fffar\Documents\GitHub\MarkYourDay\MarkYourDay\MarkYourDay.Android\obj\Debug\android\assets\ButtonCircle.FormsPlugin.Android.dll.mdb
+C:\Users\fffar\Documents\GitHub\MarkYourDay\MarkYourDay\MarkYourDay.Android\obj\Debug\res\drawable\logout.png
+C:\Users\fffar\Documents\GitHub\MarkYourDay\MarkYourDay\MarkYourDay.Android\obj\Debug\res\drawable-xxhdpi\fantacodesplash.png
+C:\Users\fffar\Documents\GitHub\MarkYourDay\MarkYourDay\MarkYourDay.Android\obj\Debug\res\drawable-xhdpi\fantacodesplash.png
+C:\Users\fffar\Documents\GitHub\MarkYourDay\MarkYourDay\MarkYourDay.Android\obj\Debug\res\drawable-hdpi\fantacodesplash.png
+C:\Users\fffar\Documents\GitHub\MarkYourDay\MarkYourDay\MarkYourDay.Android\obj\Debug\res\drawable\fantacodesplash.png
 C:\Users\fffar\Documents\GitHub\MarkYourDay\MarkYourDay\MarkYourDay.Android\obj\Debug\MarkYourDay.Android.dll.mdb
+C:\Users\fffar\Documents\GitHub\MarkYourDay\MarkYourDay\MarkYourDay.Android\bin\Debug\MarkYourDay.Android.dll.mdb

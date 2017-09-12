@@ -4,45 +4,67 @@ using System;
 using MarkYourDay.Helpers;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-using System.Threading.Tasks;
-using MarkYourDay.Services;
+using System.ComponentModel;
+using System.Runtime.CompilerServices;
 
 namespace MarkYourDay.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class Login : ContentPage
+    public partial class Login : ContentPage,INotifyPropertyChanged
     {
         public Login()
         {
             InitializeComponent();
+            BindingContext = this;
             DependencyService.Get<IStatusBar>().HideStatusBar();
             LoginButton.Clicked += Login_Clicked;           
         }
+        private bool _isBusy;
 
+        public new bool IsBusy
+        {
+            get { return _isBusy; }
+            set
+            {
+                _isBusy = value;
+                // again, this is very important
+                OnPropertyChanged();
+            }
+        }
         public async void Login_Clicked(object sender, EventArgs e)
         {
             if (!string.IsNullOrWhiteSpace(Username.Text) && (!string.IsNullOrWhiteSpace(Password.Text)))
             {
-                if (await IsUserValid(Username.Text, Password.Text))
+                IsBusy = !IsBusy;
+                OnPropertyChanged("IsBusy");
+                myStackLayout.IsVisible = !myStackLayout.IsVisible;
+                if (await LoginHelper.IsUserValid(Username.Text.ToString(), Password.Text.ToString(),this))
                 {
                     await Navigation.PushAsync(new Punch(Username.Text));
                 }
                 else
-                    await DisplayAlert("Incorrect", "Incorrect Login Details!\nPlease Fill in details and Try Again", "OK");
+                {
+                    myStackLayout.IsVisible = !myStackLayout.IsVisible;
+                    IsBusy = !IsBusy;
+                    OnPropertyChanged("IsBusy");
+                }
             }
             else
                 await DisplayAlert("Fill Details", "Please Fill all details and Try Again", "OK");
         }
 
-       /* public async Task<bool> IsUserValid(string username, string password)
+       
+
+        // this little bit is how we trigger the PropertyChanged notifier.
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        public virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {
-            bool result = true;
-            var item = await UserServices.GetUser(username, password);
-            if (item.data == null)
-            {
-                result = false;
-            }
-            return result;
-        }*/
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
+
+
     }
+
+   
 }

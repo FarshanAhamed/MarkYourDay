@@ -33,12 +33,34 @@ namespace MarkYourDay.Helpers
       
 		private static readonly string stringDefault = string.Empty;
         private const string UserNameIdentifier = "Username";
-        private const string MarkIdentifier = "AtFantacode";
-        private const string OKIdentifier = "OK";
-        private const string StartTimeIdentifier = "StartTime";
-        private const string StopTimeIdentifier = "StopTime";
+        private const string TokenIdentifier = "Token";
+        private const string UserIdIdentifier = "UserId";
+        private const string CheckedTimeIdentifier = "CheckedTime";
+        private const string CheckedStatusIdentifier = "CheckedStatus";
         #endregion
 
+        public static string CheckedTime
+        {
+            get
+            {
+                return AppSettings.GetValueOrDefault(CheckedTimeIdentifier, stringDefault);
+            }
+            set
+            {
+                AppSettings.AddOrUpdateValue(CheckedTimeIdentifier, value);
+            }
+        }
+        public static string CheckedStatus
+        {
+            get
+            {
+                return AppSettings.GetValueOrDefault(CheckedStatusIdentifier, stringDefault);
+            }
+            set
+            {
+                AppSettings.AddOrUpdateValue(CheckedStatusIdentifier, value);
+            }
+        }
         public static string Username
         {
             get
@@ -50,55 +72,36 @@ namespace MarkYourDay.Helpers
                 AppSettings.AddOrUpdateValue(UserNameIdentifier, value);
             }
         }
-
-
-        public static string AtFantacode
+        public static string Token
         {
             get
             {
-                return AppSettings.GetValueOrDefault(MarkIdentifier, stringDefault);
+                return AppSettings.GetValueOrDefault(TokenIdentifier, stringDefault);
             }
             set
             {
-                AppSettings.AddOrUpdateValue(MarkIdentifier, value);
+                AppSettings.AddOrUpdateValue(TokenIdentifier, value);
             }
         }
-
-        public static string OK
+        public static string UserId
         {
             get
             {
-                return AppSettings.GetValueOrDefault(OKIdentifier, stringDefault);
+                return AppSettings.GetValueOrDefault(UserIdIdentifier, stringDefault);
             }
             set
             {
-                AppSettings.AddOrUpdateValue(OKIdentifier, value);
+                AppSettings.AddOrUpdateValue(UserIdIdentifier, value);
             }
         }
 
-        public static string StartTime
+        public static void Clear()
         {
-            get
-            {
-                return AppSettings.GetValueOrDefault(StartTimeIdentifier, stringDefault);
-            }
-            set
-            {
-                AppSettings.AddOrUpdateValue(StartTimeIdentifier, value);
-            }
+            Username = stringDefault;
+            UserId = stringDefault;
+            Token = stringDefault;
+            CheckedStatus = stringDefault;
+            CheckedTime = stringDefault;
         }
-
-        public static string StopTime
-        {
-            get
-            {
-                return AppSettings.GetValueOrDefault(StopTimeIdentifier, stringDefault);
-            }
-            set
-            {
-                AppSettings.AddOrUpdateValue(StopTimeIdentifier, value);
-            }
-        }
-
     }
 }

@@ -17,75 +17,66 @@ namespace MarkYourDay.Helpers
         static DateTimeOffset time;
         public static double? dist = null;
        
-        public static bool GetLocation()
+        public async static Task<bool> GetLocation(Punch punch)
         {
-            FindLocation();
+            await FindLocation(punch);
 
             if (dist <= 0.15)
             {
-                Settings.OK = "Yes";
                 return true;
             }
             else
-                Settings.OK = "No";
-            return false;
-          
+                return false;
+
         }
 
-        public static async void FindLocation()
+        public static async Task FindLocation(Punch punch)
         {
-            var punchobj = new Punch(Settings.Username);
-            
-            if (CrossGeolocator.Current.IsListening)
-                return;
-            if (!CrossGeolocator.Current.IsGeolocationAvailable)
+            var punchobj = punch;
+            try
             {
-                await punchobj.DisplayAlert("Sorry", "We Couldn't locate you, Enable Location Access", "OK");
-                return;
-            }
-            if (!CrossGeolocator.Current.IsGeolocationEnabled)
-            {
-                await punchobj.DisplayAlert("Location", "Go to Settings , Enable Location Access ", "OK");
-                return;
-            }
-            CrossGeolocator.Current.DesiredAccuracy = 1;
-            var position = await CrossGeolocator.Current.GetPositionAsync(TimeSpan.FromSeconds(1));
-            if (position != null)
-            {
-                time = position.Timestamp;
-                lat = position.Latitude;
-                lon = position.Longitude;
+                if (CrossGeolocator.Current.IsListening)
+                    return;
+                else if (!CrossGeolocator.Current.IsGeolocationAvailable)
+                {
+                    await punchobj.DisplayAlert("Sorry", "We Couldn't locate you, Enable Location Access", "OK");
+                    return;
+                }
+                else if (!CrossGeolocator.Current.IsGeolocationEnabled)
+                {
+                    await punchobj.DisplayAlert("Location", "Go to Settings , Enable Location Access ", "OK");
+                    return;
+                }
+                else
+                {
+                    CrossGeolocator.Current.DesiredAccuracy = 1;
+                    var position = await CrossGeolocator.Current.GetPositionAsync(TimeSpan.FromSeconds(1));
+                    if (position != null)
+                    {
+                        time = position.Timestamp;
+                        lat = position.Latitude;
+                        lon = position.Longitude;
+
+
+                        dist = Distance(LATITUDE, LONGITUDE, lat, lon);
+                        if (dist > 0.15)
+                        {
+                            await punchobj.DisplayAlert("Sorry", "You are not at Fantacode", "OK");
+                        }
+
+                    }
+                }
                
-                
-                dist = Distance(LATITUDE, LONGITUDE, lat, lon);
-                
-                //  await DisplayAlert("Distance", "Your distance from FC: " + dist, "OK");
-
             }
-//CrossGeolocator.Current.PositionChanged += PositionChanged;
-
-            bool result = await CrossGeolocator.Current.StartListeningAsync(TimeSpan.FromSeconds(1), 1, true, new Plugin.Geolocator.Abstractions.ListenerSettings
+            catch (Exception ex)
             {
-                ActivityType = Plugin.Geolocator.Abstractions.ActivityType.AutomotiveNavigation,
-                AllowBackgroundUpdates = true,
-                DeferLocationUpdates = true,
-                DeferralDistanceMeters = 1,
-                DeferralTime = TimeSpan.FromSeconds(1),
-                ListenForSignificantChanges = true,
-                PauseLocationUpdatesAutomatically = false
-            });
-            if (!result)
-            {
-                await punchobj.DisplayAlert("Sorry", "Unable to get your location, Try Again! ", "OK");
-                return;
-            }
-            else
-            {
+                await punchobj.DisplayAlert("Unknown error", "Error: " + ex.Message.ToString(), "OK");
                 return;
             }
         }
-
-        public static void PositionChanged(object sender, PositionEventArgs e)
+            
+ 
+       /* public static void PositionChanged(object sender, PositionEventArgs e)
         {
             // Device.BeginInvokeOnMainThread(() =>
             //{
@@ -97,7 +88,7 @@ namespace MarkYourDay.Helpers
             dist = Distance(LATITUDE, LONGITUDE, lat, lon);
           
             //  });
-        }
+        }*/
         
         public static double Distance(double Latitude1, double Longitude1, double Latitude2, double Longitude2)
         {

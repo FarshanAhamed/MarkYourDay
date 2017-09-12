@@ -1,4 +1,6 @@
-﻿using ModernHttpClient;
+﻿using MarkYourDay.Helpers;
+using MarkYourDay.Models;
+using ModernHttpClient;
 using Newtonsoft.Json;
 using Plugin.Connectivity;
 using System;
@@ -13,9 +15,12 @@ namespace MarkYourDay.Services
 {
     public class CommonService<T>
     {
-        //public const string BaseUrl = "http://punchapi.azurewebsites.net/api/user";
-        public const string BaseUrl = "http://localhost:49888/api/user";
-        public async static Task<Model<T>> HttpGetOperation(string url)
+//if DEBUG
+  //      public const string BaseUrl = "http://192.168.31.6:49888/api/user";
+//#else
+        public const string BaseUrl = "http://punchapi.azurewebsites.net/api/";
+//#endif
+        public async static Task<ResponseModel<T>> HttpGetOperation(string url)
         {
             try
             {
@@ -25,46 +30,43 @@ namespace MarkYourDay.Services
                     {
                         client.BaseAddress = new Uri(BaseUrl);
                         client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-                       /* if (!string.IsNullOrWhiteSpace(key))
+                        if (!string.IsNullOrWhiteSpace(Settings.Token))
                         {
-                            client.DefaultRequestHeaders.Add("KEY", key);
+                            client.DefaultRequestHeaders.Add("Authorization", "Bearer " + Settings.Token);
                         }
-                        */
+
                         var response = await client.GetAsync(url);
                         if (response.IsSuccessStatusCode)
                         {
                             var json = await response.Content.ReadAsStringAsync();
-                            var result = await Task.Factory.StartNew(() => JsonConvert.DeserializeObject<Model<T>>(json));
+                            var result = await Task.Factory.StartNew(() => JsonConvert.DeserializeObject<ResponseModel<T>>(json));
                             return result;
                         }
                         else
                         {
-                            return new Model<T>() { statuscode = (int)response.StatusCode, statusmessage = response.StatusCode.ToString() };
+                            return new ResponseModel<T>(response.StatusCode.ToString(), response.StatusCode.ToString());
                         }
                     }
                 }
                 else
                 {
-                    var status = new Model<T>();
-                    status.statusmessage = "Cannot Connect to the Internet";
+                    var status = new ResponseModel<T>(null, "Cannot Connect to the Internet");
                     return status;
-                }
+                } 
             }
             catch (JsonException e)
             {
-                var status = new Model<T>();
-                status.statusmessage = e.ToString();
+                var status = new ResponseModel<T>(null,e.ToString());
                 return status;
             }
             catch (Exception e)
             {
-                var status = new Model<T>();
-                status.statusmessage = e.ToString();
+                var status = new ResponseModel<T>(null,e.ToString());
                 return status;
             }
         }
 
-        public static async Task<Model<T>> HttpPostOperation(string url, MultipartFormDataContent content=null, string body=null)
+        public static async Task<ResponseModel<T>> HttpPostOperation(string url, MultipartFormDataContent content=null, string body=null)
         {
             try
             {
@@ -74,10 +76,10 @@ namespace MarkYourDay.Services
                     {
                         client.BaseAddress = new Uri(BaseUrl);
                         client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-                       /* if (!string.IsNullOrWhiteSpace(key))
+                        if (!string.IsNullOrWhiteSpace(Settings.Token))
                         {
-                            client.DefaultRequestHeaders.Add("KEY", key);
-                        }*/
+                            client.DefaultRequestHeaders.Add("Authorization", "Bearer " + Settings.Token);
+                        }
                         HttpResponseMessage response = null;
                         if (content != null)
                         {
@@ -90,44 +92,40 @@ namespace MarkYourDay.Services
                         }
                         else
                         {
-                            var status = new Model<T>();
-                            status.statusmessage = "No Data!";
+                            var status = new ResponseModel<T>(null,"No Data");
                             return status;
                         }
                         if (response.IsSuccessStatusCode)
                         {
                             var json = await response.Content.ReadAsStringAsync();
-                            var result = await Task.Factory.StartNew(() => JsonConvert.DeserializeObject<Model<T>>(json));
+                            var result = await Task.Factory.StartNew(() => JsonConvert.DeserializeObject<ResponseModel<T>>(json));
                             return result;
                         }
                         else
                         {
-                            return new Model<T>() { statuscode = (int)response.StatusCode, statusmessage = response.StatusCode.ToString() };
+                            return new ResponseModel<T>(response.StatusCode.ToString(),response.StatusCode.ToString() );
                         }
                     }
                 }
                 else
                 {
-                    var status = new Model<T>();
-                    status.statusmessage = "Cannot Connect to the Internet";
+                    var status = new ResponseModel<T>(null, "Cannot Connect to the Internet");
                     return status;
                 }
             }
             catch (JsonException e)
             {
-                var status = new Model<T>();
-                status.statusmessage = e.ToString();
+                var status = new ResponseModel<T>(null,e.ToString());
                 return status;
             }
             catch (Exception e)
             {
-                var status = new Model<T>();
-                status.statusmessage = e.ToString();
+                var status = new ResponseModel<T>(null,e.ToString());
                 return status;
             }
         }
 
-        public static async Task<Model<T>> HttpPutOperation(string url, string body)
+        public static async Task<ResponseModel<T>> HttpPutOperation(string url, string body)
         {
             try
             {
@@ -137,11 +135,11 @@ namespace MarkYourDay.Services
                     {
                         client.BaseAddress = new Uri(BaseUrl);
                         client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-                      /*  if (!string.IsNullOrWhiteSpace(key))
+                       if (!string.IsNullOrWhiteSpace(Settings.Token))
                         {
-                            client.DefaultRequestHeaders.Add("KEY", key);
+                            client.DefaultRequestHeaders.Add("Authorization", "Bearer "+Settings.Token);
                         }
-                        */
+                        
                         HttpResponseMessage response = null;
                         if (body != null)
                         {
@@ -151,39 +149,35 @@ namespace MarkYourDay.Services
                         }
                         else
                         {
-                            var status = new Model<T>();
-                            status.statusmessage = "No Data!";
+                            var status = new ResponseModel<T>(null,"No Data");
                             return status;
                         }
                         if (response.IsSuccessStatusCode)
                         {
                             var json = await response.Content.ReadAsStringAsync();
-                            var result = await Task.Factory.StartNew(() => JsonConvert.DeserializeObject<Model<T>>(json));
+                            var result = await Task.Factory.StartNew(() => JsonConvert.DeserializeObject<ResponseModel<T>>(json));
                             return result;
                         }
                         else
                         {
-                            return new Model<T>() { statuscode = (int)response.StatusCode, statusmessage = response.StatusCode.ToString() };
+                            return new ResponseModel<T>(null,"Incorrect login details" );
                         }
                     }
                 }
                 else
                 {
-                    var status = new Model<T>();
-                    status.statusmessage = "Cannot Connect to the Internet";
+                    var status = new ResponseModel<T>(null, "Cannot Connect to the Internet");
                     return status;
                 }
             }
             catch (JsonException e)
             {
-                var status = new Model<T>();
-                status.statusmessage = e.ToString();
+                var status = new ResponseModel<T>(null,e.ToString());
                 return status;
             }
             catch (Exception e)
             {
-                var status = new Model<T>();
-                status.statusmessage = e.ToString();
+                var status = new ResponseModel<T>(null,e.ToString());
                 return status;
             }
         }

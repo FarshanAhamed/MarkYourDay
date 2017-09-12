@@ -99,6 +99,8 @@ class MonoPackageManager_Resources {
 	public static final String[] Assemblies = new String[]{
 		/* We need to ensure that "MarkYourDay.Android.dll" comes first in this list. */
 		"MarkYourDay.Android.dll",
+		"ButtonCircle.FormsPlugin.Abstractions.dll",
+		"ButtonCircle.FormsPlugin.Android.dll",
 		"FormsViewGroup.dll",
 		"ModernHttpClient.dll",
 		"Newtonsoft.Json.dll",
@@ -135,7 +137,6 @@ class MonoPackageManager_Resources {
 		"Xamarin.Forms.Platform.dll",
 		"Xamarin.Forms.Xaml.dll",
 		"MarkYourDay.dll",
-		"ImageCircle.Forms.Plugin.Abstractions.dll",
 	};
 	public static final String[] Dependencies = new String[]{
 	};

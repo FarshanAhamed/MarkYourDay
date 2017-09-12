@@ -49,6 +49,9 @@ C:\Users\fffar\Documents\GitHub\MarkYourDay\MarkYourDay\MarkYourDay\bin\Debug\Xa
 C:\Users\fffar\Documents\GitHub\MarkYourDay\MarkYourDay\MarkYourDay\bin\Debug\Xamarin.Forms.Xaml.xml
 C:\Users\fffar\Documents\GitHub\MarkYourDay\MarkYourDay\MarkYourDay\obj\Debug\MarkYourDay.dll
 C:\Users\fffar\Documents\GitHub\MarkYourDay\MarkYourDay\MarkYourDay\obj\Debug\MarkYourDay.pdb
+C:\Users\fffar\Documents\GitHub\MarkYourDay\MarkYourDay\MarkYourDay\obj\Debug\MarkYourDay.csprojResolveAssemblyReference.cache
+C:\Users\fffar\Documents\GitHub\MarkYourDay\MarkYourDay\MarkYourDay\bin\Debug\ButtonCircle.FormsPlugin.Abstractions.dll
+C:\Users\fffar\Documents\GitHub\MarkYourDay\MarkYourDay\MarkYourDay\bin\Debug\ButtonCircle.FormsPlugin.Abstractions.pdb
+C:\Users\fffar\Documents\GitHub\MarkYourDay\MarkYourDay\MarkYourDay\bin\Debug\ButtonCircle.FormsPlugin.Abstractions.xml
 C:\Users\fffar\Documents\GitHub\MarkYourDay\MarkYourDay\MarkYourDay\obj\Debug\MarkYourDay.dll.mdb
 C:\Users\fffar\Documents\GitHub\MarkYourDay\MarkYourDay\MarkYourDay\bin\Debug\MarkYourDay.dll.mdb
-C:\Users\fffar\Documents\GitHub\MarkYourDay\MarkYourDay\MarkYourDay\obj\Debug\MarkYourDay.csprojResolveAssemblyReference.cache

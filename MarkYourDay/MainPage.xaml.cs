@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MarkYourDay.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,6 +13,7 @@ namespace MarkYourDay
         public MainPage()
         {
             InitializeComponent();
+            DependencyService.Get<IStatusBar>().HideStatusBar();
         }
     }
 }

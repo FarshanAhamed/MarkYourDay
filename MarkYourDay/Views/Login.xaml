@@ -7,13 +7,19 @@
              BackgroundColor="White">
     <ContentPage.Content>
         <Grid>
-            <StackLayout VerticalOptions="CenterAndExpand">
+            <ActivityIndicator x:Name="myActivityIndicator" IsRunning="{Binding IsBusy}" IsVisible="{Binding IsBusy}" Color="#4094d9" VerticalOptions="Center" HorizontalOptions="Center"/>
+            <StackLayout x:Name="myStackLayout" VerticalOptions="CenterAndExpand">
                 <Image
-                Source="FcImage"
+                Source="fcimage"
                 HorizontalOptions="CenterAndExpand"
-                Margin="0,20,0,20"
-                Scale=".7"
-                   />
+                Margin="0,20,0,20">
+                    <Image.Scale>
+                        <OnPlatform x:TypeArguments="x:Double">
+                            <On Platform="Android">.7</On>
+                            <On Platform="iOS">2</On>
+                        </OnPlatform>
+                    </Image.Scale>
+                </Image>
                 <local:MyEntry
                     x:Name="Username"
                     Margin="20,5,20,7"

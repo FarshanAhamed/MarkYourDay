@@ -11,7 +11,8 @@ namespace MarkYourDay
         public App()
         {
             InitializeComponent();
-            //DependencyService.Get<IStatusBar>().HideStatusBar();
+            DependencyService.Get<IStatusBar>().HideStatusBar();
+           
 
             if (LoginHelper.CheckLoggedIn())
             {

@@ -370,6 +370,18 @@
           "lib/UAP10/Plugin.Permissions.dll": {}
         }
       },
+      "Plugins.Forms.ButtonCircle/1.0.78": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Forms": "2.3.4.224"
+        },
+        "compile": {
+          "lib/portable-net45+wp80+win8+wpa81/ButtonCircle.FormsPlugin.Abstractions.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+wp80+win8+wpa81/ButtonCircle.FormsPlugin.Abstractions.dll": {}
+        }
+      },
       "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
         "type": "package",
         "runtimeTargets": {
@@ -2788,6 +2800,18 @@
         "runtime": {
           "lib/UAP10/Plugin.Permissions.Abstractions.dll": {},
           "lib/UAP10/Plugin.Permissions.dll": {}
+        }
+      },
+      "Plugins.Forms.ButtonCircle/1.0.78": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Forms": "2.3.4.224"
+        },
+        "compile": {
+          "lib/portable-net45+wp80+win8+wpa81/ButtonCircle.FormsPlugin.Abstractions.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+wp80+win8+wpa81/ButtonCircle.FormsPlugin.Abstractions.dll": {}
         }
       },
       "runtime.any.System.Collections/4.3.0": {
@@ -5316,6 +5340,18 @@
         "runtime": {
           "lib/UAP10/Plugin.Permissions.Abstractions.dll": {},
           "lib/UAP10/Plugin.Permissions.dll": {}
+        }
+      },
+      "Plugins.Forms.ButtonCircle/1.0.78": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Forms": "2.3.4.224"
+        },
+        "compile": {
+          "lib/portable-net45+wp80+win8+wpa81/ButtonCircle.FormsPlugin.Abstractions.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+wp80+win8+wpa81/ButtonCircle.FormsPlugin.Abstractions.dll": {}
         }
       },
       "runtime.aot.System.Collections/4.3.0": {
@@ -7883,6 +7919,18 @@
           "lib/UAP10/Plugin.Permissions.dll": {}
         }
       },
+      "Plugins.Forms.ButtonCircle/1.0.78": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Forms": "2.3.4.224"
+        },
+        "compile": {
+          "lib/portable-net45+wp80+win8+wpa81/ButtonCircle.FormsPlugin.Abstractions.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+wp80+win8+wpa81/ButtonCircle.FormsPlugin.Abstractions.dll": {}
+        }
+      },
       "runtime.any.System.Collections/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -10418,6 +10466,18 @@
         "runtime": {
           "lib/UAP10/Plugin.Permissions.Abstractions.dll": {},
           "lib/UAP10/Plugin.Permissions.dll": {}
+        }
+      },
+      "Plugins.Forms.ButtonCircle/1.0.78": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Forms": "2.3.4.224"
+        },
+        "compile": {
+          "lib/portable-net45+wp80+win8+wpa81/ButtonCircle.FormsPlugin.Abstractions.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+wp80+win8+wpa81/ButtonCircle.FormsPlugin.Abstractions.dll": {}
         }
       },
       "runtime.aot.System.Collections/4.3.0": {
@@ -12991,6 +13051,18 @@
           "lib/UAP10/Plugin.Permissions.dll": {}
         }
       },
+      "Plugins.Forms.ButtonCircle/1.0.78": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Forms": "2.3.4.224"
+        },
+        "compile": {
+          "lib/portable-net45+wp80+win8+wpa81/ButtonCircle.FormsPlugin.Abstractions.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+wp80+win8+wpa81/ButtonCircle.FormsPlugin.Abstractions.dll": {}
+        }
+      },
       "runtime.any.System.Collections/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -15526,6 +15598,18 @@
         "runtime": {
           "lib/UAP10/Plugin.Permissions.Abstractions.dll": {},
           "lib/UAP10/Plugin.Permissions.dll": {}
+        }
+      },
+      "Plugins.Forms.ButtonCircle/1.0.78": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Forms": "2.3.4.224"
+        },
+        "compile": {
+          "lib/portable-net45+wp80+win8+wpa81/ButtonCircle.FormsPlugin.Abstractions.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+wp80+win8+wpa81/ButtonCircle.FormsPlugin.Abstractions.dll": {}
         }
       },
       "runtime.aot.System.Collections/4.3.0": {
@@ -18174,6 +18258,28 @@
         "plugin.permissions.2.0.1.nupkg.sha512",
         "plugin.permissions.nuspec",
         "readme.txt"
+      ]
+    },
+    "Plugins.Forms.ButtonCircle/1.0.78": {
+      "sha512": "0N/ZKmqNaEjQroWIgFHdNXBN+LYTFBgeGjNBYbMOgR5t4UOYU/FkF+HoNQDKItBdf9R2RQN7W4pe8mkue+oUjg==",
+      "type": "package",
+      "path": "plugins.forms.buttoncircle/1.0.78",
+      "files": [
+        "lib/MonoAndroid10/ButtonCircle.FormsPlugin.Abstractions.dll",
+        "lib/MonoAndroid10/ButtonCircle.FormsPlugin.Abstractions.pdb",
+        "lib/MonoAndroid10/ButtonCircle.FormsPlugin.Abstractions.xml",
+        "lib/MonoAndroid10/ButtonCircle.FormsPlugin.Android.dll",
+        "lib/MonoAndroid10/ButtonCircle.FormsPlugin.Android.pdb",
+        "lib/MonoAndroid10/ButtonCircle.FormsPlugin.Android.xml",
+        "lib/Xamarin.iOS10/ButtonCircle.FormsPlugin.Abstractions.dll",
+        "lib/Xamarin.iOS10/ButtonCircle.FormsPlugin.Abstractions.xml",
+        "lib/Xamarin.iOS10/ButtonCircle.FormsPlugin.iOS.dll",
+        "lib/Xamarin.iOS10/ButtonCircle.FormsPlugin.iOS.xml",
+        "lib/portable-net45+wp80+win8+wpa81/ButtonCircle.FormsPlugin.Abstractions.dll",
+        "lib/portable-net45+wp80+win8+wpa81/ButtonCircle.FormsPlugin.Abstractions.pdb",
+        "lib/portable-net45+wp80+win8+wpa81/ButtonCircle.FormsPlugin.Abstractions.xml",
+        "plugins.forms.buttoncircle.1.0.78.nupkg.sha512",
+        "plugins.forms.buttoncircle.nuspec"
       ]
     },
     "runtime.any.System.Collections/4.3.0": {
@@ -24763,6 +24869,7 @@
       "Microsoft.NETCore.UniversalWindowsPlatform >= 5.2.2",
       "Newtonsoft.Json >= 10.0.3",
       "Plugin.Permissions >= 2.0.1",
+      "Plugins.Forms.ButtonCircle >= 1.0.78",
       "System.Net.Http >= 4.3.2",
       "Xam.Plugin.Connectivity >= 3.0.1",
       "Xam.Plugin.Geolocator >= 4.0.1",
@@ -24808,6 +24915,7 @@
       "modernhttpclient": "2.4.2",
       "Newtonsoft.Json": "10.0.3",
       "Plugin.Permissions": "2.0.1",
+      "Plugins.Forms.ButtonCircle": "1.0.78",
       "sameerIOTApps.Plugin.SecureStorage": "1.2.2",
       "System.Net.Http": "4.3.2",
       "Xam.Plugin.Connectivity": "3.0.1",

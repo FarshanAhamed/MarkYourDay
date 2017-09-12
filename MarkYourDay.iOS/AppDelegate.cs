@@ -4,6 +4,7 @@ using System.Linq;
 
 using Foundation;
 using UIKit;
+using ButtonCircle.FormsPlugin.iOS;
 
 namespace MarkYourDay.iOS
 {
@@ -23,6 +24,7 @@ namespace MarkYourDay.iOS
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
             global::Xamarin.Forms.Forms.Init();
+            ButtonCircleRenderer.Init();
             LoadApplication(new App());
 
             return base.FinishedLaunching(app, options);
