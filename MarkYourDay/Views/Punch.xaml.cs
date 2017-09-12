@@ -96,7 +96,7 @@ namespace MarkYourDay.Views
 
         public async void Logout_Clicked(object sender, EventArgs args)
         {
-            var res = await DisplayAlert("Are you Sure?", "Are you sure you want to leave Fantacode", "OK", "Cancel");
+            var res = await DisplayAlert("Are you Sure?", "Are you sure you want to logout", "OK", "Cancel");
             if (res)
             {
                 Settings.Clear();

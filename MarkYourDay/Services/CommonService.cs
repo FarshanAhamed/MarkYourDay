@@ -19,6 +19,7 @@ namespace MarkYourDay.Services
   //      public const string BaseUrl = "http://192.168.31.6:49888/api/user";
 //#else
         public const string BaseUrl = "http://punchapi.azurewebsites.net/api/";
+        public const string apiKey = "c6ae8c42-5452-46ec-af3e-03a621ae43e0";
 //#endif
         public async static Task<ResponseModel<T>> HttpGetOperation(string url)
         {
@@ -30,6 +31,7 @@ namespace MarkYourDay.Services
                     {
                         client.BaseAddress = new Uri(BaseUrl);
                         client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+                        client.DefaultRequestHeaders.Add("API-KEY", apiKey);
                         if (!string.IsNullOrWhiteSpace(Settings.Token))
                         {
                             client.DefaultRequestHeaders.Add("Authorization", "Bearer " + Settings.Token);
@@ -76,6 +78,7 @@ namespace MarkYourDay.Services
                     {
                         client.BaseAddress = new Uri(BaseUrl);
                         client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+                        client.DefaultRequestHeaders.Add("API-KEY", apiKey);
                         if (!string.IsNullOrWhiteSpace(Settings.Token))
                         {
                             client.DefaultRequestHeaders.Add("Authorization", "Bearer " + Settings.Token);
@@ -135,9 +138,11 @@ namespace MarkYourDay.Services
                     {
                         client.BaseAddress = new Uri(BaseUrl);
                         client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-                       if (!string.IsNullOrWhiteSpace(Settings.Token))
+                        client.DefaultRequestHeaders.Add("API-KEY", apiKey);
+                        if (!string.IsNullOrWhiteSpace(Settings.Token))
                         {
                             client.DefaultRequestHeaders.Add("Authorization", "Bearer "+Settings.Token);
+                            client.DefaultRequestHeaders.Add("API_KEY", apiKey);
                         }
                         
                         HttpResponseMessage response = null;
