@@ -9,6 +9,7 @@ using MarkYourDay.iOS;
 using System.Threading;
 
 [assembly: Xamarin.Forms.Dependency(typeof(StatusBarImplementation))]
+[assembly: Xamarin.Forms.Dependency(typeof(CloseApp))]
 namespace MarkYourDay.iOS
 {
     public class StatusBarImplementation : IStatusBar

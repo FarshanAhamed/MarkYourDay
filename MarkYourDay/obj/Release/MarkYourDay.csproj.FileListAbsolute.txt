@@ -55,5 +55,3 @@ C:\Users\fffar\Documents\GitHub\MarkYourDay\MarkYourDay\MarkYourDay\obj\Release\
 C:\Users\fffar\Documents\GitHub\MarkYourDay\MarkYourDay\MarkYourDay\obj\Release\MarkYourDay.csprojResolveAssemblyReference.cache
 C:\Users\fffar\Documents\GitHub\MarkYourDay\MarkYourDay\MarkYourDay\obj\Release\MarkYourDay.dll.mdb
 C:\Users\fffar\Documents\GitHub\MarkYourDay\MarkYourDay\MarkYourDay\bin\Release\MarkYourDay.dll.mdb
-C:\Users\fffar\Documents\GitHub\MarkYourDay\MarkYourDay\MarkYourDay\obj\Release\MarkYourDay.dll.mdb
-C:\Users\fffar\Documents\GitHub\MarkYourDay\MarkYourDay\MarkYourDay\bin\Release\MarkYourDay.dll.mdb

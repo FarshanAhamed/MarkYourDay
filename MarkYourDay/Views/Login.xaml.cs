@@ -65,13 +65,18 @@ namespace MarkYourDay.Views
         }
         protected override bool OnBackButtonPressed()
         {
-            var closer = DependencyService.Get<ICloseApp>();
-            if (closer != null)
+            Task<bool> action = DisplayAlert("Are you sure?", "Do you want to close the application?", "Yes", "No");
+            action.ContinueWith(task =>
             {
-                closer.ClosetheApp();
-            }
-            base.OnBackButtonPressed();
-            return true;            
+                if (task.Result)
+                {
+                    DependencyService.Get<ICloseApp>().ClosetheApp();
+                    base.OnBackButtonPressed();
+                    //return false;
+                }
+            });
+            return true;
+                      
         }
 
     }

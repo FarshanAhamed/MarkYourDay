@@ -76,12 +76,12 @@ namespace MarkYourDay.Helpers
             var item = await AttendanceServices.GetToday();
             if (item.data == null)
             {
-                Settings.CheckedTime = "No Check Ins found";
+                Settings.CheckedTime = "No Check-in found";
                 Settings.CheckedStatus = "CHECKS_NULL";
             }
             else if (item.data.firstcheckin == DateTime.MinValue)
             {
-                Settings.CheckedTime = "No Check ins found";
+                Settings.CheckedTime = "No Check-in found";
                 Settings.CheckedStatus = "CHECKED_OUT";
             }
             else if (item.data.firstcheckout == DateTime.MinValue)

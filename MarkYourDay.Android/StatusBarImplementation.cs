@@ -3,8 +3,10 @@ using Android.Views;
 using MarkYourDay.Interfaces;
 using Xamarin.Forms;
 using MarkYourDay.Droid;
+using MarkYourDay.Views;
 
 [assembly: Xamarin.Forms.Dependency(typeof(StatusBarImplementation))]
+[assembly: Xamarin.Forms.Dependency(typeof(CloseApp))]
 namespace MarkYourDay.Droid
 {
     public class StatusBarImplementation: IStatusBar

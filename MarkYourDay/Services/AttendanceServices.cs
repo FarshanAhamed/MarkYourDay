@@ -45,7 +45,7 @@ namespace MarkYourDay.Services
                 var first = result.data.firstcheckout;
                 var second = result.data.secondcheckout;
                 var fos = (second != DateTime.MinValue) ? second : first;
-                Settings.CheckedTime = "Last Checked in at " + fos.ToLocalTime().ToString();
+                Settings.CheckedTime = "Last Checked-Out at " + fos.ToLocalTime().ToString();
                 await punch.DisplayAlert("Success", result.message, "OK");
             }
             else
