@@ -55,3 +55,17 @@ C:\Users\fffar\Documents\GitHub\MarkYourDay\MarkYourDay\MarkYourDay\bin\Debug\Bu
 C:\Users\fffar\Documents\GitHub\MarkYourDay\MarkYourDay\MarkYourDay\bin\Debug\ButtonCircle.FormsPlugin.Abstractions.xml
 C:\Users\fffar\Documents\GitHub\MarkYourDay\MarkYourDay\MarkYourDay\obj\Debug\MarkYourDay.dll.mdb
 C:\Users\fffar\Documents\GitHub\MarkYourDay\MarkYourDay\MarkYourDay\bin\Debug\MarkYourDay.dll.mdb
+C:\Users\fffar\Documents\GitHub\MarkYourDay\MarkYourDay\MarkYourDay\obj\Debug\MarkYourDay.dll.mdb
+C:\Users\fffar\Documents\GitHub\MarkYourDay\MarkYourDay\MarkYourDay\bin\Debug\MarkYourDay.dll.mdb
+C:\Users\fffar\Documents\GitHub\MarkYourDay\MarkYourDay\MarkYourDay\obj\Debug\MarkYourDay.dll.mdb
+C:\Users\fffar\Documents\GitHub\MarkYourDay\MarkYourDay\MarkYourDay\bin\Debug\MarkYourDay.dll.mdb
+C:\Users\fffar\Documents\GitHub\MarkYourDay\MarkYourDay\MarkYourDay\obj\Debug\MarkYourDay.dll.mdb
+C:\Users\fffar\Documents\GitHub\MarkYourDay\MarkYourDay\MarkYourDay\bin\Debug\MarkYourDay.dll.mdb
+C:\Users\fffar\Documents\GitHub\MarkYourDay\MarkYourDay\MarkYourDay\obj\Debug\MarkYourDay.dll.mdb
+C:\Users\fffar\Documents\GitHub\MarkYourDay\MarkYourDay\MarkYourDay\bin\Debug\MarkYourDay.dll.mdb
+C:\Users\fffar\Documents\GitHub\MarkYourDay\MarkYourDay\MarkYourDay\obj\Debug\MarkYourDay.dll.mdb
+C:\Users\fffar\Documents\GitHub\MarkYourDay\MarkYourDay\MarkYourDay\bin\Debug\MarkYourDay.dll.mdb
+C:\Users\fffar\Documents\GitHub\MarkYourDay\MarkYourDay\MarkYourDay\obj\Debug\MarkYourDay.dll.mdb
+C:\Users\fffar\Documents\GitHub\MarkYourDay\MarkYourDay\MarkYourDay\bin\Debug\MarkYourDay.dll.mdb
+C:\Users\fffar\Documents\GitHub\MarkYourDay\MarkYourDay\MarkYourDay\obj\Debug\MarkYourDay.dll.mdb
+C:\Users\fffar\Documents\GitHub\MarkYourDay\MarkYourDay\MarkYourDay\bin\Debug\MarkYourDay.dll.mdb

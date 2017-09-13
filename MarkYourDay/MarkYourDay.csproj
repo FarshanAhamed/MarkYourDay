@@ -43,6 +43,7 @@
     <Compile Include="Helpers\LoginHelper.cs" />
     <Compile Include="Helpers\Settings.cs" />
     <Compile Include="Helpers\WhereAmI.cs" />
+    <Compile Include="Interfaces\ICloseApp.cs" />
     <Compile Include="Interfaces\IStatusBar.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>

@@ -87,6 +87,7 @@ namespace MarkYourDay.Views
         {
             
             InitializeComponent();
+            NavigationPage.SetHasBackButton(this, false);
             Init();
             BindingContext = this;
             fc = new WorkPlace(LATITUDE, LONGITUDE);           
@@ -160,6 +161,11 @@ namespace MarkYourDay.Views
         {
             myActivityIndicator.IsVisible = !myActivityIndicator.IsVisible;
             myGridView.IsVisible = !myGridView.IsVisible;
+        }
+        protected override bool OnBackButtonPressed()
+        {
+            base.OnBackButtonPressed();
+            return true;
         }
     }
 }

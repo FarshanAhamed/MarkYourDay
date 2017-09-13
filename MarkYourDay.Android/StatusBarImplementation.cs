@@ -30,4 +30,13 @@ namespace MarkYourDay.Droid
         }
         #endregion
     }
+
+    public class CloseApp : ICloseApp
+    {
+        public void ClosetheApp()
+        {
+            var activity = (Activity)Forms.Context;
+            activity.FinishAffinity();
+        }
+    }
 }

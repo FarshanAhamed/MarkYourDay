@@ -191,15 +191,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\checkindark%402x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\checkindark%403x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\checkindark.png" />
-  </ItemGroup>
-  <ItemGroup>
     <BundleResource Include="Resources\fcimage.png" />
   </ItemGroup>
   <ItemGroup>
@@ -216,15 +207,6 @@
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\logout%403x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\fantacodesplash.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\fantacodesplash%402x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\fantacodesplash%403x.png" />
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Resources\Media.xcassets\AppIcons.appiconset\Contents.json">

@@ -6,6 +6,7 @@ using MarkYourDay.Interfaces;
 using Foundation;
 using UIKit;
 using MarkYourDay.iOS;
+using System.Threading;
 
 [assembly: Xamarin.Forms.Dependency(typeof(StatusBarImplementation))]
 namespace MarkYourDay.iOS
@@ -28,5 +29,12 @@ namespace MarkYourDay.iOS
             UIApplication.SharedApplication.StatusBarHidden = false;
         }
         #endregion
+    }
+    public class CloseApp : ICloseApp
+    {
+        public void ClosetheApp()
+        {
+            Thread.CurrentThread.Abort();
+        }
     }
 }

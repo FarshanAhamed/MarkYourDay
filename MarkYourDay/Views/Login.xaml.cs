@@ -6,6 +6,7 @@ using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
+using System.Threading.Tasks;
 
 namespace MarkYourDay.Views
 {
@@ -62,7 +63,16 @@ namespace MarkYourDay.Views
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
-
+        protected override bool OnBackButtonPressed()
+        {
+            var closer = DependencyService.Get<ICloseApp>();
+            if (closer != null)
+            {
+                closer.ClosetheApp();
+            }
+            base.OnBackButtonPressed();
+            return true;            
+        }
 
     }
 
