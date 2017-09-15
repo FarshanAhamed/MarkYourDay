@@ -1,0 +1,85 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ButtonCircle.FormsPlugin.Abstractions</name>
+    </assembly>
+    <members>
+        <member name="T:ButtonCircle.FormsPlugin.Abstractions.CircleButton">
+            <summary>
+            ButtonCircle Interface
+            </summary>
+        </member>
+        <member name="F:ButtonCircle.FormsPlugin.Abstractions.CircleButton.BorderThicknessProperty">
+            <summary>
+            Thickness property of border
+            </summary>
+        </member>
+        <member name="P:ButtonCircle.FormsPlugin.Abstractions.CircleButton.BorderThickness">
+            <summary>
+            Border thickness of circle image
+            </summary>
+        </member>
+        <member name="F:ButtonCircle.FormsPlugin.Abstractions.CircleButton.BorderColorProperty">
+            <summary>
+            Color property of border
+            </summary>
+        </member>
+        <member name="P:ButtonCircle.FormsPlugin.Abstractions.CircleButton.BorderColor">
+            <summary>
+            Border Color of circle image
+            </summary>
+        </member>
+        <member name="F:ButtonCircle.FormsPlugin.Abstractions.CircleButton.IconProperty">
+            <summary>
+            Property definition for the <see cref="P:ButtonCircle.FormsPlugin.Abstractions.CircleButton.Icon"/> Property
+            </summary>
+        </member>
+        <member name="P:ButtonCircle.FormsPlugin.Abstractions.CircleButton.Icon">
+            <summary>
+            Gets or sets the icon.
+            </summary>
+            <value>
+            The icon.
+            </value>
+        </member>
+        <member name="P:ButtonCircle.FormsPlugin.Abstractions.Icons.Icon">
+            <summary>
+            Gets or sets the icon.
+            </summary>
+            <value>
+            The icon.
+            </value>
+        </member>
+        <member name="M:ButtonCircle.FormsPlugin.Abstractions.Icons.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:ButtonCircle.FormsPlugin.Abstractions.Icons"/> struct.
+            </summary>
+            <param name="icon">The icon.</param>
+        </member>
+        <member name="M:ButtonCircle.FormsPlugin.Abstractions.Icons.op_Implicit(ButtonCircle.FormsPlugin.Abstractions.Icons)~System.String">
+            <summary>
+            Performs an implicit conversion from <see cref="T:ButtonCircle.FormsPlugin.Abstractions.Icons"/> to <see cref="T:System.String"/>.
+            </summary>
+            <param name="icon">The icon.</param>
+            <returns>
+            The result of the conversion.
+            </returns>
+        </member>
+        <member name="M:ButtonCircle.FormsPlugin.Abstractions.IconsConverter.CanConvertFrom(System.Type)">
+            <summary>
+            Determines whether this instance [can convert from] the specified source type.
+            </summary>
+            <param name="sourceType">Type of the source.</param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+        <member name="M:ButtonCircle.FormsPlugin.Abstractions.IconsConverter.ConvertFromInvariantString(System.String)">
+            <summary>
+            Convert from invariant String.
+            </summary>
+            <param name="value">The value.</param>
+            <returns></returns>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+    </members>
+</doc>
