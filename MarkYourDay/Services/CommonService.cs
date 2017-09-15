@@ -52,7 +52,7 @@ namespace MarkYourDay.Services
                 }
                 else
                 {
-                    var status = new ResponseModel<T>(null, "Cannot Connect to the Internet");
+                    var status = new ResponseModel<T>("NETWORK_DISABLED", "Cannot Connect to the Internet");
                     return status;
                 } 
             }
@@ -112,7 +112,7 @@ namespace MarkYourDay.Services
                 }
                 else
                 {
-                    var status = new ResponseModel<T>(null, "Cannot Connect to the Internet");
+                    var status = new ResponseModel<T>("NETWORK_DISABLED", "Cannot Connect to the Internet");
                     return status;
                 }
             }
@@ -171,7 +171,7 @@ namespace MarkYourDay.Services
                 }
                 else
                 {
-                    var status = new ResponseModel<T>(null, "Cannot Connect to the Internet");
+                    var status = new ResponseModel<T>("NETWORK_DISABLED", "Cannot Connect to the Internet");
                     return status;
                 }
             }

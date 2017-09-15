@@ -4,99 +4,64 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:myView="clr-namespace:ButtonCircle.FormsPlugin.Abstractions;assembly=ButtonCircle.FormsPlugin.Abstractions"
              x:Class="MarkYourDay.Views.Punch">
-    <ContentPage.ToolbarItems>
+    <ContentPage.ToolbarItems>        
+        <ToolbarItem Text="Refresh" Icon="refresh" Clicked="Init"/>
+        <ToolbarItem />
         <ToolbarItem Text="Log out" Icon="logout" Clicked="Logout_Clicked"/>
     </ContentPage.ToolbarItems>
-    <ContentPage.Content>        
+    <ContentPage.Content>
         <Grid
-            HorizontalOptions="Fill"
-            VerticalOptions="Fill">
+             x:Name="grid"
+             HorizontalOptions="Fill"
+             VerticalOptions="Fill">    
+ 
             <ActivityIndicator x:Name="myActivityIndicator" IsRunning="True" IsVisible="False" Color="#4094d9" VerticalOptions="Center" HorizontalOptions="Center"/>
+ 
             <Grid x:Name="myGridView" VerticalOptions="Fill" HorizontalOptions="Fill">
                 <Label 
-                x:Name="usernameLabel"
-                FontSize="Medium"
-                Text="{Binding UserText}"
-                HorizontalOptions="CenterAndExpand"
-                VerticalOptions="Start"
-                Margin="20"
-                />
-            <Label
-                x:Name="historylabel"
-                Text="{Binding Time}"
-                FontAttributes="Italic"
-                HorizontalOptions="Center"
-                VerticalOptions="EndAndExpand"
-                Margin="20"
-                />        
+                        x:Name="usernameLabel"
+                        FontSize="Medium"
+                        Text="{Binding UserText}"
+                        HorizontalOptions="CenterAndExpand"
+                        VerticalOptions="Start"
+                        Margin="20">
+                    
+                </Label>
+
+                <Label
+                        x:Name="historylabel"
+                        Text="{Binding Time}"
+                        FontAttributes="Italic"
+                        HorizontalOptions="Center"
+                        VerticalOptions="EndAndExpand"
+                        Margin="20">
+                    
+                </Label>
+
+                <myView:CircleButton 
+                        x:Name="CheckInBtn"
+                        Text="Check In" 
+                        FontSize="Medium" FontAttributes="Bold" TextColor="#4094d9" 
+                        HeightRequest="150" WidthRequest="150"
+                        HorizontalOptions="Center" VerticalOptions="Center"
+                        BorderRadius="100" BorderThickness="3" BorderColor="#4094d9" 
+                        BackgroundColor="#DCDCDC" Clicked="OnStartTapped">
+                </myView:CircleButton>
                 
-            <myView:CircleButton 
-                x:Name="CheckInBtn"
-                Text="Check In" 
-                FontSize="Medium" FontAttributes="Bold" TextColor="#4094d9" 
-                HeightRequest="150" WidthRequest="150"
-                HorizontalOptions="Center" VerticalOptions="Center"
-                BorderRadius="100" BorderThickness="5" BorderColor="#4094d9" 
-                BackgroundColor="#DCDCDC" Clicked="OnStartTapped">
-            </myView:CircleButton>
-            <myView:CircleButton
-                x:Name="CheckOutBtn"
-                Text="Check Out"                 
-                FontSize="Medium" FontAttributes="Bold" TextColor="#4094d9" 
-                HeightRequest="150" WidthRequest="150" 
-                HorizontalOptions="Center" VerticalOptions="Center"
-                BorderRadius="100" BorderThickness="5" BorderColor="#4094d9" 
-                BackgroundColor="#DCDCDC" Clicked="OnStopTapped">
-            </myView:CircleButton>
-            <!-- <ProgressBar HorizontalOptions="Center" VerticalOptions="End"/>
-            <controls:CircleImage x:Name="CheckInBtn" Source="checkindark" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Aspect="AspectFill">
-                <controls:CircleImage.WidthRequest>
-                    <OnPlatform x:TypeArguments="x:Double">
-                        <On Platform="Android, iOS">200</On>
-                        <On Platform="WinPhone">200</On>
-                    </OnPlatform>
-                </controls:CircleImage.WidthRequest>
-                <controls:CircleImage.HeightRequest>
-                    <OnPlatform x:TypeArguments="x:Double">
-                        <On Platform="Android, iOS">200</On>
-                        <On Platform="WinPhone">200</On>
-                    </OnPlatform>
-                </controls:CircleImage.HeightRequest>
-            </controls:CircleImage>
-            <controls:CircleImage x:Name="CheckOutBtn" Source="checkoutdark" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Aspect="AspectFill">
-                <controls:CircleImage.WidthRequest>
-                    <OnPlatform x:TypeArguments="x:Double">
-                        <On Platform="Android, iOS">200</On>
-                        <On Platform="WinPhone">75</On>
-                    </OnPlatform>
-                </controls:CircleImage.WidthRequest>
-                <controls:CircleImage.HeightRequest>
-                    <OnPlatform x:TypeArguments="x:Double">
-                        <On Platform="Android, iOS">200</On>
-                        <On Platform="WinPhone">75</On>
-                    </OnPlatform>
-                </controls:CircleImage.HeightRequest>
-            </controls:CircleImage> -->
-            <!-- <Button
-                x:Name="Start"
-                Text="START"
-                WidthRequest="200"
-                HeightRequest="100"
-                TextColor="Blue"
-                FontSize="Large"
-                FontAttributes="Bold"
-                Margin="10"
-                />
-            <Button
-                x:Name="Stop"
-                Text="STOP"
-                WidthRequest="200"
-                FontSize="Large"
-                FontAttributes="Bold"
-                HeightRequest="100"
-                TextColor="Orange"
-                Margin="10"/> -->
+                <myView:CircleButton
+                        x:Name="CheckOutBtn"
+                        Text="Check Out"                 
+                        FontSize="Medium" FontAttributes="Bold" TextColor="#4094d9" 
+                        HeightRequest="150" WidthRequest="150" 
+                        HorizontalOptions="Center" VerticalOptions="Center"
+                        BorderRadius="100" BorderThickness="3" BorderColor="#4094d9" 
+                        BackgroundColor="#DCDCDC" Clicked="OnStopTapped">
+                </myView:CircleButton>
+                
             </Grid>
+
         </Grid>
+
     </ContentPage.Content>
+
 </ContentPage>

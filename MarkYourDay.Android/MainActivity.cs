@@ -1,13 +1,10 @@
-﻿using System;
-
+﻿
 using Android.App;
 using Android.Content.PM;
-using Android.Runtime;
-using Android.Views;
-using Android.Widget;
 using Android.OS;
 using Plugin.Permissions;
 using ButtonCircle.FormsPlugin.Droid;
+
 
 namespace MarkYourDay.Droid
 {
@@ -20,8 +17,9 @@ namespace MarkYourDay.Droid
             ToolbarResource = Resource.Layout.Toolbar;
 
             base.OnCreate(bundle);
-            ButtonCircleRenderer.Init();
+            
 
+            ButtonCircleRenderer.Init();
             global::Xamarin.Forms.Forms.Init(this, bundle);
             LoadApplication(new App());
         }

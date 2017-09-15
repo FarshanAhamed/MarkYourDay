@@ -2,6 +2,12 @@ C:\Users\fffar\Documents\GitHub\MarkYourDay\MarkYourDay\MarkYourDay.Android\obj\
 C:\Users\fffar\Documents\GitHub\MarkYourDay\MarkYourDay\MarkYourDay.Android\obj\Debug\android\assets\ButtonCircle.FormsPlugin.Abstractions.dll
 C:\Users\fffar\Documents\GitHub\MarkYourDay\MarkYourDay\MarkYourDay.Android\obj\Debug\android\assets\ButtonCircle.FormsPlugin.Android.dll
 C:\Users\fffar\Documents\GitHub\MarkYourDay\MarkYourDay\MarkYourDay.Android\obj\Debug\android\assets\FormsViewGroup.dll
+C:\Users\fffar\Documents\GitHub\MarkYourDay\MarkYourDay\MarkYourDay.Android\obj\Debug\android\assets\Microsoft.Azure.Mobile.Analytics.Android.Bindings.dll
+C:\Users\fffar\Documents\GitHub\MarkYourDay\MarkYourDay\MarkYourDay.Android\obj\Debug\android\assets\Microsoft.Azure.Mobile.Analytics.dll
+C:\Users\fffar\Documents\GitHub\MarkYourDay\MarkYourDay\MarkYourDay.Android\obj\Debug\android\assets\Microsoft.Azure.Mobile.Android.Bindings.dll
+C:\Users\fffar\Documents\GitHub\MarkYourDay\MarkYourDay\MarkYourDay.Android\obj\Debug\android\assets\Microsoft.Azure.Mobile.Crashes.Android.Bindings.dll
+C:\Users\fffar\Documents\GitHub\MarkYourDay\MarkYourDay\MarkYourDay.Android\obj\Debug\android\assets\Microsoft.Azure.Mobile.Crashes.dll
+C:\Users\fffar\Documents\GitHub\MarkYourDay\MarkYourDay\MarkYourDay.Android\obj\Debug\android\assets\Microsoft.Azure.Mobile.dll
 C:\Users\fffar\Documents\GitHub\MarkYourDay\MarkYourDay\MarkYourDay.Android\obj\Debug\android\assets\ModernHttpClient.dll
 C:\Users\fffar\Documents\GitHub\MarkYourDay\MarkYourDay\MarkYourDay.Android\obj\Debug\android\assets\Newtonsoft.Json.dll
 C:\Users\fffar\Documents\GitHub\MarkYourDay\MarkYourDay\MarkYourDay.Android\obj\Debug\android\assets\OkHttp.dll

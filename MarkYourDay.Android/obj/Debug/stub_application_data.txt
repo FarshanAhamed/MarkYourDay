@@ -1,2 +1,2 @@
 android.app.Application
-com.fantacode.markyourday
+Mark_your_day.Mark_your_day

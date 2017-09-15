@@ -74,9 +74,14 @@ namespace MarkYourDay.Helpers
         public static async Task GetToday()
         {
             var item = await AttendanceServices.GetToday();
-            if (item.data == null)
+            if (item.status == "NETWORK_DISABLED")
             {
-                Settings.CheckedTime = "No Check-in found";
+                Settings.CheckedTime = "Can't connect to the network";
+                Settings.CheckedStatus = "DEFAULT";
+            }
+            else if (item.data == null)
+            {
+                Settings.CheckedTime = "Nothing to display";
                 Settings.CheckedStatus = "CHECKS_NULL";
             }
             else if (item.data.firstcheckin == DateTime.MinValue)

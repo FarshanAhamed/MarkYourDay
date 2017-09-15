@@ -1,10 +1,7 @@
 ﻿using MarkYourDay.Views;
+using Plugin.Connectivity;
 using Plugin.Geolocator;
-using Plugin.Geolocator.Abstractions;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace MarkYourDay.Helpers
@@ -17,62 +14,74 @@ namespace MarkYourDay.Helpers
         static DateTimeOffset time;
         public static double? dist = null;
        
-        public async static Task<bool> GetLocation(Punch punch)
+        public async Task<bool> GetLocation(Punch punch)
         {
-            await FindLocation(punch);
-
-            if (dist <= 0.15)
+            if (await CrossConnectivity.Current.IsRemoteReachable("www.google.com", msTimeout: 10000))
             {
-                return true;
+                await this.FindLocation(punch);
+
+                if (dist <= 0.15)
+                {
+                    return true;
+                }
+                else
+                    punch.Init();
+                    return false;
             }
             else
+            {
+                await punch.DisplayAlert("There is a problem", "Cannot connect to internet", "OK");
                 return false;
+
+            }
 
         }
 
-        public static async Task FindLocation(Punch punch)
+        public async Task FindLocation(Punch punch)
         {
-            var punchobj = punch;
-            try
-            {
-                if (CrossGeolocator.Current.IsListening)
-                    return;
-                else if (!CrossGeolocator.Current.IsGeolocationAvailable)
+            var punchobj = punch;            
+                try
                 {
-                    await punchobj.DisplayAlert("Sorry", "We Couldn't locate you, Enable Location Access", "OK");
-                    return;
-                }
-                else if (!CrossGeolocator.Current.IsGeolocationEnabled)
-                {
-                    await punchobj.DisplayAlert("Location", "Go to Settings , Enable Location Access ", "OK");
-                    return;
-                }
-                else
-                {
-                    CrossGeolocator.Current.DesiredAccuracy = 1;
-                    var position = await CrossGeolocator.Current.GetPositionAsync(TimeSpan.FromSeconds(1));
-                    if (position != null)
+                    if (CrossGeolocator.Current.IsListening)
+                        return;
+                    else if (!CrossGeolocator.Current.IsGeolocationAvailable)
                     {
-                        time = position.Timestamp;
-                        lat = position.Latitude;
-                        lon = position.Longitude;
-
-
-                        dist = Distance(LATITUDE, LONGITUDE, lat, lon);
-                        if (dist > 0.15)
-                        {
-                            await punchobj.DisplayAlert("Sorry", "You are not at Fantacode", "OK");
-                        }
-
+                        await punchobj.DisplayAlert("Sorry", "We Couldn't locate you, Enable Location Access", "OK");
+                        return;
                     }
+                    else if (!CrossGeolocator.Current.IsGeolocationEnabled)
+                    {
+                        await punchobj.DisplayAlert("Location", "Go to Settings , Enable Location Access ", "OK");
+                        return;
+                    }
+                    else
+                    {
+                    CrossGeolocator.Current.DesiredAccuracy = 1;
+                        var position = await CrossGeolocator.Current.GetPositionAsync(TimeSpan.FromSeconds(6));
+                   if (position != null)
+                        {
+                            time = position.Timestamp;
+                            lat = position.Latitude;
+                            lon = position.Longitude;
+
+
+                            dist = Distance(LATITUDE, LONGITUDE, lat, lon);
+                            if (dist > 0.15)
+                            {
+                                await punchobj.DisplayAlert("Sorry", "You are not at Fantacode", "OK");
+                            }
+
+                        }
+                    }
+
                 }
-               
-            }
-            catch (Exception ex)
-            {
-                await punchobj.DisplayAlert("Unknown error", "Error: " + ex.Message.ToString(), "OK");
-                return;
-            }
+                catch (Exception ex)
+                {
+                    await punchobj.DisplayAlert("Unknown error", "Please try again", "OK");
+                    return;
+                }
+
+           
         }
             
  

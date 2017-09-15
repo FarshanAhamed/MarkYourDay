@@ -24,7 +24,7 @@ namespace MarkYourDay.Droid
         {
             base.OnCreate(savedInstanceState);
             ButtonCircleRenderer.Init();
-            System.Threading.Thread.Sleep(3000);
+            System.Threading.Thread.Sleep(1500);
             StartActivity(typeof(MainActivity));
         }
     }

@@ -2,9 +2,6 @@
 using MarkYourDay.Interfaces;
 using MarkYourDay.Models;
 using MarkYourDay.Services;
-using Newtonsoft.Json;
-using Plugin.Geolocator;
-using Plugin.Geolocator.Abstractions;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -58,9 +55,11 @@ namespace MarkYourDay.Views
                     CheckInBtn.IsEnabled = false;
                     CheckOutBtn.IsEnabled = false;
                     break;
-                default:
+                case "CHECKS_NULL":
                     CheckInBtn.IsVisible = true;
                     CheckOutBtn.IsVisible = false;
+                    break;
+                default:
                     break;
             }
             //DependencyService.Get<IStatusBar>().ShowStatusBar();
@@ -83,17 +82,16 @@ namespace MarkYourDay.Views
             Loading();
         }
 
-        public Punch(string Username)
+        public Punch()
         {
             
             InitializeComponent();
             NavigationPage.SetHasBackButton(this, false);
             Init();
             BindingContext = this;
-            fc = new WorkPlace(LATITUDE, LONGITUDE);           
-
-
+            fc = new WorkPlace(LATITUDE, LONGITUDE);
         }
+
 
         public async void Logout_Clicked(object sender, EventArgs args)
         {
@@ -108,7 +106,7 @@ namespace MarkYourDay.Views
         public async Task OnStartTapped(object sender,EventArgs args)
         {
             Loading();
-            var result = await WhereAmI.GetLocation(this);
+            var result = await new WhereAmI().GetLocation(this);
             if (result)
             {
                 await AttendanceServices.CheckIn(this);
@@ -120,7 +118,7 @@ namespace MarkYourDay.Views
         public async Task OnStopTapped(object sender,EventArgs args)
         {
             Loading();
-            var result = await WhereAmI.GetLocation(this);
+            var result = await new WhereAmI().GetLocation(this);
             if (result)
             {
                 var res = await DisplayAlert("Are you Sure?", "Are you sure you want to leave Fantacode", "OK", "Cancel");
@@ -164,8 +162,18 @@ namespace MarkYourDay.Views
         }
         protected override bool OnBackButtonPressed()
         {
-            base.OnBackButtonPressed();
+            Task<bool> action = DisplayAlert("Are you sure?", "Do you want to close the application?", "Yes", "No");
+            action.ContinueWith(task =>
+            {
+                if (task.Result)
+                {
+                    DependencyService.Get<ICloseApp>().ClosetheApp();
+                    base.OnBackButtonPressed();
+                    //return false;
+                }
+            });
             return true;
+
         }
     }
 }

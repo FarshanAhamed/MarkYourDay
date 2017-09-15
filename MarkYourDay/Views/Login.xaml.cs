@@ -41,7 +41,7 @@ namespace MarkYourDay.Views
                 myStackLayout.IsVisible = !myStackLayout.IsVisible;
                 if (await LoginHelper.IsUserValid(Username.Text.ToString(), Password.Text.ToString(),this))
                 {
-                    await Navigation.PushAsync(new Punch(Username.Text));
+                    await Navigation.PushAsync(new Punch());
                 }
                 else
                 {
