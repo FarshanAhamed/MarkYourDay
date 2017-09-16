@@ -2,6 +2,9 @@ C:\Users\fffar\Documents\GitHub\MarkYourDay\MarkYourDay\MarkYourDay\bin\Debug\Ma
 C:\Users\fffar\Documents\GitHub\MarkYourDay\MarkYourDay\MarkYourDay\bin\Debug\MarkYourDay.pdb
 C:\Users\fffar\Documents\GitHub\MarkYourDay\MarkYourDay\MarkYourDay\bin\Debug\ButtonCircle.FormsPlugin.Abstractions.dll
 C:\Users\fffar\Documents\GitHub\MarkYourDay\MarkYourDay\MarkYourDay\bin\Debug\ImageCircle.Forms.Plugin.Abstractions.dll
+C:\Users\fffar\Documents\GitHub\MarkYourDay\MarkYourDay\MarkYourDay\bin\Debug\Microsoft.Azure.Mobile.Analytics.dll
+C:\Users\fffar\Documents\GitHub\MarkYourDay\MarkYourDay\MarkYourDay\bin\Debug\Microsoft.Azure.Mobile.Crashes.dll
+C:\Users\fffar\Documents\GitHub\MarkYourDay\MarkYourDay\MarkYourDay\bin\Debug\Microsoft.Azure.Mobile.dll
 C:\Users\fffar\Documents\GitHub\MarkYourDay\MarkYourDay\MarkYourDay\bin\Debug\ModernHttpClient.dll
 C:\Users\fffar\Documents\GitHub\MarkYourDay\MarkYourDay\MarkYourDay\bin\Debug\Newtonsoft.Json.dll
 C:\Users\fffar\Documents\GitHub\MarkYourDay\MarkYourDay\MarkYourDay\bin\Debug\Plugin.Connectivity.Abstractions.dll
@@ -52,9 +55,5 @@ C:\Users\fffar\Documents\GitHub\MarkYourDay\MarkYourDay\MarkYourDay\obj\Debug\Ma
 C:\Users\fffar\Documents\GitHub\MarkYourDay\MarkYourDay\MarkYourDay\obj\Debug\MarkYourDay.Views.Punch.xaml.g.cs
 C:\Users\fffar\Documents\GitHub\MarkYourDay\MarkYourDay\MarkYourDay\obj\Debug\MarkYourDay.dll
 C:\Users\fffar\Documents\GitHub\MarkYourDay\MarkYourDay\MarkYourDay\obj\Debug\MarkYourDay.pdb
-C:\Users\fffar\Documents\GitHub\MarkYourDay\MarkYourDay\MarkYourDay\bin\Debug\Microsoft.Azure.Mobile.Analytics.dll
-C:\Users\fffar\Documents\GitHub\MarkYourDay\MarkYourDay\MarkYourDay\bin\Debug\Microsoft.Azure.Mobile.Crashes.dll
-C:\Users\fffar\Documents\GitHub\MarkYourDay\MarkYourDay\MarkYourDay\bin\Debug\Microsoft.Azure.Mobile.dll
-C:\Users\fffar\Documents\GitHub\MarkYourDay\MarkYourDay\MarkYourDay\obj\Debug\MarkYourDay.csprojResolveAssemblyReference.cache
 C:\Users\fffar\Documents\GitHub\MarkYourDay\MarkYourDay\MarkYourDay\obj\Debug\MarkYourDay.dll.mdb
 C:\Users\fffar\Documents\GitHub\MarkYourDay\MarkYourDay\MarkYourDay\bin\Debug\MarkYourDay.dll.mdb
