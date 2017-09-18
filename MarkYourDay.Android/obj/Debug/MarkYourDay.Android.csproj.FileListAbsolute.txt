@@ -28,7 +28,6 @@ C:\Users\fffar\Documents\GitHub\MarkYourDay\MarkYourDay\MarkYourDay.Android\bin\
 C:\Users\fffar\Documents\GitHub\MarkYourDay\MarkYourDay\MarkYourDay.Android\bin\Debug\Plugin.Settings.Abstractions.dll
 C:\Users\fffar\Documents\GitHub\MarkYourDay\MarkYourDay\MarkYourDay.Android\bin\Debug\Plugin.Settings.dll
 C:\Users\fffar\Documents\GitHub\MarkYourDay\MarkYourDay\MarkYourDay.Android\bin\Debug\Xamarin.Android.Support.Animated.Vector.Drawable.dll
-C:\Users\fffar\Documents\GitHub\MarkYourDay\MarkYourDay\MarkYourDay.Android\bin\Debug\Xamarin.Android.Support.Annotations.dll
 C:\Users\fffar\Documents\GitHub\MarkYourDay\MarkYourDay\MarkYourDay.Android\bin\Debug\Xamarin.Android.Support.Compat.dll
 C:\Users\fffar\Documents\GitHub\MarkYourDay\MarkYourDay\MarkYourDay.Android\bin\Debug\Xamarin.Android.Support.Core.UI.dll
 C:\Users\fffar\Documents\GitHub\MarkYourDay\MarkYourDay\MarkYourDay.Android\bin\Debug\Xamarin.Android.Support.Core.Utils.dll

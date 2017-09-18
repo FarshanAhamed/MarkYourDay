@@ -23,8 +23,6 @@ C:\Users\fffar\Documents\GitHub\MarkYourDay\MarkYourDay\MarkYourDay.Android\obj\
 C:\Users\fffar\Documents\GitHub\MarkYourDay\MarkYourDay\MarkYourDay.Android\obj\Debug\android\assets\Plugin.Settings.Abstractions.dll
 C:\Users\fffar\Documents\GitHub\MarkYourDay\MarkYourDay\MarkYourDay.Android\obj\Debug\android\assets\Plugin.Settings.dll
 C:\Users\fffar\Documents\GitHub\MarkYourDay\MarkYourDay\MarkYourDay.Android\obj\Debug\android\assets\Xamarin.Android.Support.Animated.Vector.Drawable.dll
-C:\Users\fffar\Documents\GitHub\MarkYourDay\MarkYourDay\MarkYourDay.Android\obj\Debug\android\assets\Xamarin.Android.Support.Annotations.dll
-C:\Users\fffar\Documents\GitHub\MarkYourDay\MarkYourDay\MarkYourDay.Android\obj\Debug\android\assets\Xamarin.Android.Support.Compat.dll
 C:\Users\fffar\Documents\GitHub\MarkYourDay\MarkYourDay\MarkYourDay.Android\obj\Debug\android\assets\Xamarin.Android.Support.Core.UI.dll
 C:\Users\fffar\Documents\GitHub\MarkYourDay\MarkYourDay\MarkYourDay.Android\obj\Debug\android\assets\Xamarin.Android.Support.Core.Utils.dll
 C:\Users\fffar\Documents\GitHub\MarkYourDay\MarkYourDay\MarkYourDay.Android\obj\Debug\android\assets\Xamarin.Android.Support.Design.dll
@@ -37,7 +35,6 @@ C:\Users\fffar\Documents\GitHub\MarkYourDay\MarkYourDay\MarkYourDay.Android\obj\
 C:\Users\fffar\Documents\GitHub\MarkYourDay\MarkYourDay\MarkYourDay.Android\obj\Debug\android\assets\Xamarin.Android.Support.v7.MediaRouter.dll
 C:\Users\fffar\Documents\GitHub\MarkYourDay\MarkYourDay\MarkYourDay.Android\obj\Debug\android\assets\Xamarin.Android.Support.v7.Palette.dll
 C:\Users\fffar\Documents\GitHub\MarkYourDay\MarkYourDay\MarkYourDay.Android\obj\Debug\android\assets\Xamarin.Android.Support.v7.RecyclerView.dll
-C:\Users\fffar\Documents\GitHub\MarkYourDay\MarkYourDay\MarkYourDay.Android\obj\Debug\android\assets\Xamarin.Android.Support.Vector.Drawable.dll
 C:\Users\fffar\Documents\GitHub\MarkYourDay\MarkYourDay\MarkYourDay.Android\obj\Debug\android\assets\Xamarin.Forms.Core.dll
 C:\Users\fffar\Documents\GitHub\MarkYourDay\MarkYourDay\MarkYourDay.Android\obj\Debug\android\assets\Xamarin.Forms.Platform.Android.dll
 C:\Users\fffar\Documents\GitHub\MarkYourDay\MarkYourDay\MarkYourDay.Android\obj\Debug\android\assets\Xamarin.Forms.Platform.dll
@@ -83,6 +80,8 @@ C:\Users\fffar\Documents\GitHub\MarkYourDay\MarkYourDay\MarkYourDay.Android\obj\
 C:\Users\fffar\Documents\GitHub\MarkYourDay\MarkYourDay\MarkYourDay.Android\obj\Debug\android\assets\System.Threading.dll
 C:\Users\fffar\Documents\GitHub\MarkYourDay\MarkYourDay\MarkYourDay.Android\obj\Debug\android\assets\System.Reflection.Primitives.dll
 C:\Users\fffar\Documents\GitHub\MarkYourDay\MarkYourDay\MarkYourDay.Android\obj\Debug\android\assets\System.Text.Encoding.Extensions.dll
+C:\Users\fffar\Documents\GitHub\MarkYourDay\MarkYourDay\MarkYourDay.Android\obj\Debug\android\assets\Xamarin.Android.Support.Compat.dll
+C:\Users\fffar\Documents\GitHub\MarkYourDay\MarkYourDay\MarkYourDay.Android\obj\Debug\android\assets\Xamarin.Android.Support.Vector.Drawable.dll
 C:\Users\fffar\Documents\GitHub\MarkYourDay\MarkYourDay\MarkYourDay.Android\obj\Debug\android\assets\System.ComponentModel.dll
 C:\Users\fffar\Documents\GitHub\MarkYourDay\MarkYourDay\MarkYourDay.Android\obj\Debug\android\assets\System.Collections.Concurrent.dll
 C:\Users\fffar\Documents\GitHub\MarkYourDay\MarkYourDay\MarkYourDay.Android\obj\Debug\android\assets\System.Runtime.InteropServices.dll

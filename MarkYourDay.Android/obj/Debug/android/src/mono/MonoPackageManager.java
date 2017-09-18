@@ -123,8 +123,6 @@ class MonoPackageManager_Resources {
 		"Plugin.Settings.Abstractions.dll",
 		"Plugin.Settings.dll",
 		"Xamarin.Android.Support.Animated.Vector.Drawable.dll",
-		"Xamarin.Android.Support.Annotations.dll",
-		"Xamarin.Android.Support.Compat.dll",
 		"Xamarin.Android.Support.Core.UI.dll",
 		"Xamarin.Android.Support.Core.Utils.dll",
 		"Xamarin.Android.Support.Design.dll",
@@ -137,12 +135,13 @@ class MonoPackageManager_Resources {
 		"Xamarin.Android.Support.v7.MediaRouter.dll",
 		"Xamarin.Android.Support.v7.Palette.dll",
 		"Xamarin.Android.Support.v7.RecyclerView.dll",
-		"Xamarin.Android.Support.Vector.Drawable.dll",
 		"Xamarin.Forms.Core.dll",
 		"Xamarin.Forms.Platform.Android.dll",
 		"Xamarin.Forms.Platform.dll",
 		"Xamarin.Forms.Xaml.dll",
 		"MarkYourDay.dll",
+		"Xamarin.Android.Support.Compat.dll",
+		"Xamarin.Android.Support.Vector.Drawable.dll",
 	};
 	public static final String[] Dependencies = new String[]{
 	};
