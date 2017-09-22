@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26430.14
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarkYourDay.Android", "MarkYourDay\MarkYourDay.Android\MarkYourDay.Android.csproj", "{4A8023BB-5545-4045-A9F9-C64EF606607C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarkYourDay.Android", "MarkYourDay.Android\MarkYourDay.Android.csproj", "{4A8023BB-5545-4045-A9F9-C64EF606607C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarkYourDay", "MarkYourDay\MarkYourDay\MarkYourDay.csproj", "{7FC3D4A3-0EA2-457D-8CFA-1D5B023B795D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarkYourDay", "MarkYourDay\MarkYourDay.csproj", "{7FC3D4A3-0EA2-457D-8CFA-1D5B023B795D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarkYourDay.UWP", "MarkYourDay\MarkYourDay.UWP\MarkYourDay.UWP.csproj", "{C3CA8443-FB1E-4F36-984E-4631027F2D9A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarkYourDay.UWP", "MarkYourDay.UWP\MarkYourDay.UWP.csproj", "{C3CA8443-FB1E-4F36-984E-4631027F2D9A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarkYourDay.iOS", "MarkYourDay\MarkYourDay.iOS\MarkYourDay.iOS.csproj", "{295CC4BE-036B-4F91-8B81-FC4C8AC6935A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarkYourDay.iOS", "MarkYourDay.iOS\MarkYourDay.iOS.csproj", "{295CC4BE-036B-4F91-8B81-FC4C8AC6935A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

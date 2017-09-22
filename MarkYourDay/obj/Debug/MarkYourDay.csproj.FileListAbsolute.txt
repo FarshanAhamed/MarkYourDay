@@ -48,6 +48,7 @@ C:\Users\fffar\Documents\GitHub\MarkYourDay\MarkYourDay\MarkYourDay\bin\Debug\Xa
 C:\Users\fffar\Documents\GitHub\MarkYourDay\MarkYourDay\MarkYourDay\bin\Debug\Xamarin.Forms.Platform.pdb
 C:\Users\fffar\Documents\GitHub\MarkYourDay\MarkYourDay\MarkYourDay\bin\Debug\Xamarin.Forms.Xaml.pdb
 C:\Users\fffar\Documents\GitHub\MarkYourDay\MarkYourDay\MarkYourDay\bin\Debug\Xamarin.Forms.Xaml.xml
+C:\Users\fffar\Documents\GitHub\MarkYourDay\MarkYourDay\MarkYourDay\obj\Debug\MarkYourDay.csprojResolveAssemblyReference.cache
 C:\Users\fffar\Documents\GitHub\MarkYourDay\MarkYourDay\MarkYourDay\obj\Debug\MarkYourDay.csproj.CoreCompileInputs.cache
 C:\Users\fffar\Documents\GitHub\MarkYourDay\MarkYourDay\MarkYourDay\obj\Debug\MarkYourDay.MainPage.xaml.g.cs
 C:\Users\fffar\Documents\GitHub\MarkYourDay\MarkYourDay\MarkYourDay\obj\Debug\MarkYourDay.App.xaml.g.cs
